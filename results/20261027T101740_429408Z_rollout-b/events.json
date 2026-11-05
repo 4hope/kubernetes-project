@@ -1,0 +1,5309 @@
+{
+  "apiVersion": "v1",
+  "items": [
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:53Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-79nmr",
+        "namespace": "selfheal",
+        "resourceVersion": "3747",
+        "uid": "c1bbdfcc-2ba7-458b-98f7-f93744fb2c8f"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:53Z",
+      "message": "Successfully assigned selfheal/demo-web-7d56c4cc4f-79nmr to selfheal-control-plane",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:53Z",
+        "name": "demo-web-7d56c4cc4f-79nmr.18e25b4996427e05",
+        "namespace": "selfheal",
+        "resourceVersion": "3754",
+        "uid": "745a0209-bf55-434b-bfae-d3ed943e48a6"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:53Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-79nmr",
+        "namespace": "selfheal",
+        "resourceVersion": "3752",
+        "uid": "c1bbdfcc-2ba7-458b-98f7-f93744fb2c8f"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:53Z",
+      "message": "Container image \"selfheal-web:v2\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:53Z",
+        "name": "demo-web-7d56c4cc4f-79nmr.18e25b49b43fb13b",
+        "namespace": "selfheal",
+        "resourceVersion": "3759",
+        "uid": "621dab6a-f4b9-4af8-9798-5671d527b80f"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:53Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-79nmr",
+        "namespace": "selfheal",
+        "resourceVersion": "3752",
+        "uid": "c1bbdfcc-2ba7-458b-98f7-f93744fb2c8f"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:53Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:53Z",
+        "name": "demo-web-7d56c4cc4f-79nmr.18e25b49b618cca2",
+        "namespace": "selfheal",
+        "resourceVersion": "3761",
+        "uid": "689dded7-4732-48ac-b8dd-51aae7f40458"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:53Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-79nmr",
+        "namespace": "selfheal",
+        "resourceVersion": "3752",
+        "uid": "c1bbdfcc-2ba7-458b-98f7-f93744fb2c8f"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:53Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:53Z",
+        "name": "demo-web-7d56c4cc4f-79nmr.18e25b49bfd7aeb9",
+        "namespace": "selfheal",
+        "resourceVersion": "3762",
+        "uid": "64dca98e-dcd1-4fbc-827d-c07cf4476d2a"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 3,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:53Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-79nmr",
+        "namespace": "selfheal",
+        "resourceVersion": "3752",
+        "uid": "c1bbdfcc-2ba7-458b-98f7-f93744fb2c8f"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:55Z",
+      "message": "Readiness probe failed: Get \"http://10.244.0.17:8080/ready\": dial tcp 10.244.0.17:8080: connect: connection refused",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:53Z",
+        "name": "demo-web-7d56c4cc4f-79nmr.18e25b49c019cb0a",
+        "namespace": "selfheal",
+        "resourceVersion": "3768",
+        "uid": "39fb7c78-615b-495f-a114-1b48366d15ab"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 7,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:56Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-79nmr",
+        "namespace": "selfheal",
+        "resourceVersion": "3752",
+        "uid": "c1bbdfcc-2ba7-458b-98f7-f93744fb2c8f"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:13:02Z",
+      "message": "Readiness probe failed: HTTP probe failed with statuscode: 503",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:56Z",
+        "name": "demo-web-7d56c4cc4f-79nmr.18e25b4a3f581dc3",
+        "namespace": "selfheal",
+        "resourceVersion": "3793",
+        "uid": "906308ee-367e-4260-be58-e650900a919b"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:14:36Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-79nmr",
+        "namespace": "selfheal",
+        "resourceVersion": "3752",
+        "uid": "c1bbdfcc-2ba7-458b-98f7-f93744fb2c8f"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:36Z",
+      "message": "Stopping container web",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:14:36Z",
+        "name": "demo-web-7d56c4cc4f-79nmr.18e25b6183dc35c4",
+        "namespace": "selfheal",
+        "resourceVersion": "4080",
+        "uid": "4510cf38-6af7-43b1-a2e3-aacc68138295"
+      },
+      "reason": "Killing",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:13:05Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-lbd5c",
+        "namespace": "selfheal",
+        "resourceVersion": "3815",
+        "uid": "f90cc9c0-d171-4095-9ec0-a3994cc04e54"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:13:05Z",
+      "message": "Successfully assigned selfheal/demo-web-7d56c4cc4f-lbd5c to selfheal-control-plane",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:13:05Z",
+        "name": "demo-web-7d56c4cc4f-lbd5c.18e25b4c564db91c",
+        "namespace": "selfheal",
+        "resourceVersion": "3821",
+        "uid": "29558d67-86df-49fa-a645-f6179c331a77"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:13:05Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-lbd5c",
+        "namespace": "selfheal",
+        "resourceVersion": "3819",
+        "uid": "f90cc9c0-d171-4095-9ec0-a3994cc04e54"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:13:05Z",
+      "message": "Container image \"selfheal-web:v2\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:13:05Z",
+        "name": "demo-web-7d56c4cc4f-lbd5c.18e25b4c76d6c3d9",
+        "namespace": "selfheal",
+        "resourceVersion": "3827",
+        "uid": "876e84b8-0395-4305-acfd-1316b3b3f2be"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:13:05Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-lbd5c",
+        "namespace": "selfheal",
+        "resourceVersion": "3819",
+        "uid": "f90cc9c0-d171-4095-9ec0-a3994cc04e54"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:13:05Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:13:05Z",
+        "name": "demo-web-7d56c4cc4f-lbd5c.18e25b4c7906b9d1",
+        "namespace": "selfheal",
+        "resourceVersion": "3829",
+        "uid": "d8e5aa66-7977-480e-aebc-dd25b755de83"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:13:05Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-lbd5c",
+        "namespace": "selfheal",
+        "resourceVersion": "3819",
+        "uid": "f90cc9c0-d171-4095-9ec0-a3994cc04e54"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:13:05Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:13:05Z",
+        "name": "demo-web-7d56c4cc4f-lbd5c.18e25b4c82330a7d",
+        "namespace": "selfheal",
+        "resourceVersion": "3830",
+        "uid": "eb64ae7c-158f-4518-97d3-131b6fddb106"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 3,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:13:05Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-lbd5c",
+        "namespace": "selfheal",
+        "resourceVersion": "3819",
+        "uid": "f90cc9c0-d171-4095-9ec0-a3994cc04e54"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:13:07Z",
+      "message": "Readiness probe failed: Get \"http://10.244.0.18:8080/ready\": dial tcp 10.244.0.18:8080: connect: connection refused",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:13:05Z",
+        "name": "demo-web-7d56c4cc4f-lbd5c.18e25b4c82767167",
+        "namespace": "selfheal",
+        "resourceVersion": "3836",
+        "uid": "4f8ab7ce-627c-47ab-b5ca-45f291d5a125"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 7,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:13:08Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-lbd5c",
+        "namespace": "selfheal",
+        "resourceVersion": "3819",
+        "uid": "f90cc9c0-d171-4095-9ec0-a3994cc04e54"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:13:14Z",
+      "message": "Readiness probe failed: HTTP probe failed with statuscode: 503",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:13:08Z",
+        "name": "demo-web-7d56c4cc4f-lbd5c.18e25b4d090ab6b3",
+        "namespace": "selfheal",
+        "resourceVersion": "3861",
+        "uid": "75730439-d8ca-462c-a624-04e2197bea16"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:14:22Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-lbd5c",
+        "namespace": "selfheal",
+        "resourceVersion": "3819",
+        "uid": "f90cc9c0-d171-4095-9ec0-a3994cc04e54"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:22Z",
+      "message": "Stopping container web",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:14:22Z",
+        "name": "demo-web-7d56c4cc4f-lbd5c.18e25b5e41d9215b",
+        "namespace": "selfheal",
+        "resourceVersion": "4004",
+        "uid": "ff574753-5c14-4cee-b630-40fb1c057013"
+      },
+      "reason": "Killing",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:14:27Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-lbd5c",
+        "namespace": "selfheal",
+        "resourceVersion": "3819",
+        "uid": "f90cc9c0-d171-4095-9ec0-a3994cc04e54"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:27Z",
+      "message": "Readiness probe failed: Get \"http://10.244.0.18:8080/ready\": read tcp 10.244.0.1:38322->10.244.0.18:8080: read: connection reset by peer",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:14:27Z",
+        "name": "demo-web-7d56c4cc4f-lbd5c.18e25b5f8ead3dca",
+        "namespace": "selfheal",
+        "resourceVersion": "4042",
+        "uid": "29079bc4-d309-4b65-96c4-1af8a58bdb43"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:11:05Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-m785b",
+        "namespace": "selfheal",
+        "resourceVersion": "3412",
+        "uid": "abff2cca-9f5a-4159-93e0-d21809052ec7"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:11:05Z",
+      "message": "Successfully assigned selfheal/demo-web-7d56c4cc4f-m785b to selfheal-control-plane",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:11:05Z",
+        "name": "demo-web-7d56c4cc4f-m785b.18e25b306692d4cc",
+        "namespace": "selfheal",
+        "resourceVersion": "3419",
+        "uid": "d027537a-322e-45d5-adab-8e58bc7ca38d"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:11:05Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-m785b",
+        "namespace": "selfheal",
+        "resourceVersion": "3415",
+        "uid": "abff2cca-9f5a-4159-93e0-d21809052ec7"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:11:05Z",
+      "message": "Container image \"selfheal-web:v2\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:11:05Z",
+        "name": "demo-web-7d56c4cc4f-m785b.18e25b308a202305",
+        "namespace": "selfheal",
+        "resourceVersion": "3425",
+        "uid": "80014afe-200f-4d25-a683-354f9eb0f059"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:11:05Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-m785b",
+        "namespace": "selfheal",
+        "resourceVersion": "3415",
+        "uid": "abff2cca-9f5a-4159-93e0-d21809052ec7"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:11:05Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:11:05Z",
+        "name": "demo-web-7d56c4cc4f-m785b.18e25b308c798523",
+        "namespace": "selfheal",
+        "resourceVersion": "3427",
+        "uid": "6d2bd2f7-689a-44ba-a2f1-9028697ea3e1"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:11:05Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-m785b",
+        "namespace": "selfheal",
+        "resourceVersion": "3415",
+        "uid": "abff2cca-9f5a-4159-93e0-d21809052ec7"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:11:05Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:11:05Z",
+        "name": "demo-web-7d56c4cc4f-m785b.18e25b3095e4b1ff",
+        "namespace": "selfheal",
+        "resourceVersion": "3428",
+        "uid": "8263216f-4e52-42d7-a4b2-2706a3609352"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 3,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:11:05Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-m785b",
+        "namespace": "selfheal",
+        "resourceVersion": "3415",
+        "uid": "abff2cca-9f5a-4159-93e0-d21809052ec7"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:11:07Z",
+      "message": "Readiness probe failed: Get \"http://10.244.0.14:8080/ready\": dial tcp 10.244.0.14:8080: connect: connection refused",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:11:05Z",
+        "name": "demo-web-7d56c4cc4f-m785b.18e25b3096348a24",
+        "namespace": "selfheal",
+        "resourceVersion": "3435",
+        "uid": "e3595e1d-571e-4e5e-9825-b2a8062cdc51"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 7,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:11:08Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-m785b",
+        "namespace": "selfheal",
+        "resourceVersion": "3415",
+        "uid": "abff2cca-9f5a-4159-93e0-d21809052ec7"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:11:14Z",
+      "message": "Readiness probe failed: HTTP probe failed with statuscode: 503",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:11:08Z",
+        "name": "demo-web-7d56c4cc4f-m785b.18e25b31180f1f9a",
+        "namespace": "selfheal",
+        "resourceVersion": "3460",
+        "uid": "1fc5c15a-7a14-415d-9085-a09c3991e5cc"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:26Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-m785b",
+        "namespace": "selfheal",
+        "resourceVersion": "3415",
+        "uid": "abff2cca-9f5a-4159-93e0-d21809052ec7"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:26Z",
+      "message": "Stopping container web",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:26Z",
+        "name": "demo-web-7d56c4cc4f-m785b.18e25b433f6d1817",
+        "namespace": "selfheal",
+        "resourceVersion": "3641",
+        "uid": "25b60ccb-9a78-46c2-bc05-77c5da544f65"
+      },
+      "reason": "Killing",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:13Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-phzg5",
+        "namespace": "selfheal",
+        "resourceVersion": "4495",
+        "uid": "fea6849c-e1c8-4167-b80e-64f118dc0787"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:13Z",
+      "message": "Successfully assigned selfheal/demo-web-7d56c4cc4f-phzg5 to selfheal-control-plane",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:13Z",
+        "name": "demo-web-7d56c4cc4f-phzg5.18e25b940c1599ee",
+        "namespace": "selfheal",
+        "resourceVersion": "4502",
+        "uid": "316bbb56-5b41-4a1c-80b3-09f354b24747"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:13Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-phzg5",
+        "namespace": "selfheal",
+        "resourceVersion": "4499",
+        "uid": "fea6849c-e1c8-4167-b80e-64f118dc0787"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:13Z",
+      "message": "Container image \"selfheal-web:v2\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:13Z",
+        "name": "demo-web-7d56c4cc4f-phzg5.18e25b942d17e19e",
+        "namespace": "selfheal",
+        "resourceVersion": "4509",
+        "uid": "424dd651-629a-4cd9-91d9-148d01b2ac74"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:13Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-phzg5",
+        "namespace": "selfheal",
+        "resourceVersion": "4499",
+        "uid": "fea6849c-e1c8-4167-b80e-64f118dc0787"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:13Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:13Z",
+        "name": "demo-web-7d56c4cc4f-phzg5.18e25b942f449b0b",
+        "namespace": "selfheal",
+        "resourceVersion": "4511",
+        "uid": "d429ec45-55b0-47bc-8d4c-002dae7a9c89"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:14Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-phzg5",
+        "namespace": "selfheal",
+        "resourceVersion": "4499",
+        "uid": "fea6849c-e1c8-4167-b80e-64f118dc0787"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:14Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:14Z",
+        "name": "demo-web-7d56c4cc4f-phzg5.18e25b94529029e4",
+        "namespace": "selfheal",
+        "resourceVersion": "4512",
+        "uid": "82217a1f-ad7d-4a68-a47d-3aef5c51ecd7"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 2,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:14Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-phzg5",
+        "namespace": "selfheal",
+        "resourceVersion": "4499",
+        "uid": "fea6849c-e1c8-4167-b80e-64f118dc0787"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:14Z",
+      "message": "Readiness probe failed: Get \"http://10.244.0.23:8080/ready\": dial tcp 10.244.0.23:8080: connect: connection refused",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:14Z",
+        "name": "demo-web-7d56c4cc4f-phzg5.18e25b9452db00c1",
+        "namespace": "selfheal",
+        "resourceVersion": "4517",
+        "uid": "58b0f377-4967-4313-806e-58dc1a33cd6b"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 8,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:17Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-phzg5",
+        "namespace": "selfheal",
+        "resourceVersion": "4499",
+        "uid": "fea6849c-e1c8-4167-b80e-64f118dc0787"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:24Z",
+      "message": "Readiness probe failed: HTTP probe failed with statuscode: 503",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:17Z",
+        "name": "demo-web-7d56c4cc4f-phzg5.18e25b9500c83ba1",
+        "namespace": "selfheal",
+        "resourceVersion": "4545",
+        "uid": "a5952779-e273-42ee-85c5-43d525ff3e82"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:00Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-prxvd",
+        "namespace": "selfheal",
+        "resourceVersion": "4424",
+        "uid": "a908ffe6-899a-47e0-8877-d9a54a657739"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:00Z",
+      "message": "Successfully assigned selfheal/demo-web-7d56c4cc4f-prxvd to selfheal-control-plane",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:00Z",
+        "name": "demo-web-7d56c4cc4f-prxvd.18e25b91162fdfbc",
+        "namespace": "selfheal",
+        "resourceVersion": "4430",
+        "uid": "eabb00f8-f07e-4c3a-b5a7-316910e7b077"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:00Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-prxvd",
+        "namespace": "selfheal",
+        "resourceVersion": "4427",
+        "uid": "a908ffe6-899a-47e0-8877-d9a54a657739"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:00Z",
+      "message": "Container image \"selfheal-web:v2\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:00Z",
+        "name": "demo-web-7d56c4cc4f-prxvd.18e25b9136201cd0",
+        "namespace": "selfheal",
+        "resourceVersion": "4434",
+        "uid": "a51ef865-b76e-4097-bd8e-363f6df5f4eb"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:00Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-prxvd",
+        "namespace": "selfheal",
+        "resourceVersion": "4427",
+        "uid": "a908ffe6-899a-47e0-8877-d9a54a657739"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:00Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:00Z",
+        "name": "demo-web-7d56c4cc4f-prxvd.18e25b91383dc7ab",
+        "namespace": "selfheal",
+        "resourceVersion": "4436",
+        "uid": "1b34ec25-80fb-4568-915c-0a1e59d62dfd"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:01Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-prxvd",
+        "namespace": "selfheal",
+        "resourceVersion": "4427",
+        "uid": "a908ffe6-899a-47e0-8877-d9a54a657739"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:01Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:01Z",
+        "name": "demo-web-7d56c4cc4f-prxvd.18e25b914177e542",
+        "namespace": "selfheal",
+        "resourceVersion": "4437",
+        "uid": "e4f080b9-c507-443b-94e3-b6159b39f03f"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 3,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:01Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-prxvd",
+        "namespace": "selfheal",
+        "resourceVersion": "4427",
+        "uid": "a908ffe6-899a-47e0-8877-d9a54a657739"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:02Z",
+      "message": "Readiness probe failed: Get \"http://10.244.0.22:8080/ready\": dial tcp 10.244.0.22:8080: connect: connection refused",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:01Z",
+        "name": "demo-web-7d56c4cc4f-prxvd.18e25b9141d46b5f",
+        "namespace": "selfheal",
+        "resourceVersion": "4446",
+        "uid": "646320ea-bd66-4211-a22b-6e313904c14f"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 8,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:03Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-prxvd",
+        "namespace": "selfheal",
+        "resourceVersion": "4427",
+        "uid": "a908ffe6-899a-47e0-8877-d9a54a657739"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:10Z",
+      "message": "Readiness probe failed: HTTP probe failed with statuscode: 503",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:03Z",
+        "name": "demo-web-7d56c4cc4f-prxvd.18e25b91ba0895d1",
+        "namespace": "selfheal",
+        "resourceVersion": "4474",
+        "uid": "e1bb1210-920e-40be-bb39-0c396ea16218"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:10:52Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-vdwlw",
+        "namespace": "selfheal",
+        "resourceVersion": "3352",
+        "uid": "7c1b6fb3-0519-404b-aef1-309578da78cb"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:10:52Z",
+      "message": "Successfully assigned selfheal/demo-web-7d56c4cc4f-vdwlw to selfheal-control-plane",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:10:52Z",
+        "name": "demo-web-7d56c4cc4f-vdwlw.18e25b2d9618bafc",
+        "namespace": "selfheal",
+        "resourceVersion": "3357",
+        "uid": "ab09f1e0-e015-4200-a934-da046ee0387c"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 8,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:10:53Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-vdwlw",
+        "namespace": "selfheal",
+        "resourceVersion": "3356",
+        "uid": "7c1b6fb3-0519-404b-aef1-309578da78cb"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:11:02Z",
+      "message": "Readiness probe failed: HTTP probe failed with statuscode: 503",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:10:53Z",
+        "name": "demo-web-7d56c4cc4f-vdwlw.18e25b2db11eaabe",
+        "namespace": "selfheal",
+        "resourceVersion": "3391",
+        "uid": "0bf9f676-0143-4e1b-9844-9486da4d2c71"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:10:53Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-vdwlw",
+        "namespace": "selfheal",
+        "resourceVersion": "3356",
+        "uid": "7c1b6fb3-0519-404b-aef1-309578da78cb"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:10:53Z",
+      "message": "Container image \"selfheal-web:v2\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:10:53Z",
+        "name": "demo-web-7d56c4cc4f-vdwlw.18e25b2db6169cb1",
+        "namespace": "selfheal",
+        "resourceVersion": "3363",
+        "uid": "b13baaa4-8a1f-4eea-bf2f-a436128c73c5"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:10:53Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-vdwlw",
+        "namespace": "selfheal",
+        "resourceVersion": "3356",
+        "uid": "7c1b6fb3-0519-404b-aef1-309578da78cb"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:10:53Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:10:53Z",
+        "name": "demo-web-7d56c4cc4f-vdwlw.18e25b2db89597eb",
+        "namespace": "selfheal",
+        "resourceVersion": "3365",
+        "uid": "18af4a3e-d8e0-47b4-a127-99ca0dbc0a56"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:10:53Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-vdwlw",
+        "namespace": "selfheal",
+        "resourceVersion": "3356",
+        "uid": "7c1b6fb3-0519-404b-aef1-309578da78cb"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:10:53Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:10:53Z",
+        "name": "demo-web-7d56c4cc4f-vdwlw.18e25b2dc1954eb9",
+        "namespace": "selfheal",
+        "resourceVersion": "3366",
+        "uid": "07cbadb8-03de-4b0f-9441-b930b065bb8c"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 2,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:10:53Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-vdwlw",
+        "namespace": "selfheal",
+        "resourceVersion": "3356",
+        "uid": "7c1b6fb3-0519-404b-aef1-309578da78cb"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:10:54Z",
+      "message": "Readiness probe failed: Get \"http://10.244.0.13:8080/ready\": dial tcp 10.244.0.13:8080: connect: connection refused",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:10:53Z",
+        "name": "demo-web-7d56c4cc4f-vdwlw.18e25b2dc1dace46",
+        "namespace": "selfheal",
+        "resourceVersion": "3371",
+        "uid": "dde3c57e-acd4-4a47-8cc1-2703ac5fb74a"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:09Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-7d56c4cc4f-vdwlw",
+        "namespace": "selfheal",
+        "resourceVersion": "3356",
+        "uid": "7c1b6fb3-0519-404b-aef1-309578da78cb"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:09Z",
+      "message": "Stopping container web",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:09Z",
+        "name": "demo-web-7d56c4cc4f-vdwlw.18e25b3f501216ab",
+        "namespace": "selfheal",
+        "resourceVersion": "3573",
+        "uid": "cc8b397a-0927-487a-b8d8-767bd5bc1ee2"
+      },
+      "reason": "Killing",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:10:52Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-7d56c4cc4f",
+        "namespace": "selfheal",
+        "resourceVersion": "3349",
+        "uid": "cabadede-8e4a-4361-ab0b-18903260f332"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:10:52Z",
+      "message": "Created pod: demo-web-7d56c4cc4f-vdwlw",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:10:52Z",
+        "name": "demo-web-7d56c4cc4f.18e25b2d9556d5ba",
+        "namespace": "selfheal",
+        "resourceVersion": "3353",
+        "uid": "08e756e5-48c0-4e23-9183-09c61761aa92"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:11:05Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-7d56c4cc4f",
+        "namespace": "selfheal",
+        "resourceVersion": "3405",
+        "uid": "cabadede-8e4a-4361-ab0b-18903260f332"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:11:05Z",
+      "message": "Created pod: demo-web-7d56c4cc4f-m785b",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:11:05Z",
+        "name": "demo-web-7d56c4cc4f.18e25b3065de741f",
+        "namespace": "selfheal",
+        "resourceVersion": "3416",
+        "uid": "f05a9c43-dd96-4dac-9e94-275c3921317b"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:09Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-7d56c4cc4f",
+        "namespace": "selfheal",
+        "resourceVersion": "3566",
+        "uid": "cabadede-8e4a-4361-ab0b-18903260f332"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:09Z",
+      "message": "Deleted pod: demo-web-7d56c4cc4f-vdwlw",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:09Z",
+        "name": "demo-web-7d56c4cc4f.18e25b3f4fead4ec",
+        "namespace": "selfheal",
+        "resourceVersion": "3570",
+        "uid": "9b736514-8ae5-4c45-b0bd-a4a8818e1aa5"
+      },
+      "reason": "SuccessfulDelete",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:26Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-7d56c4cc4f",
+        "namespace": "selfheal",
+        "resourceVersion": "3636",
+        "uid": "cabadede-8e4a-4361-ab0b-18903260f332"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:26Z",
+      "message": "Deleted pod: demo-web-7d56c4cc4f-m785b",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:26Z",
+        "name": "demo-web-7d56c4cc4f.18e25b433f51fbe6",
+        "namespace": "selfheal",
+        "resourceVersion": "3640",
+        "uid": "81422b76-b511-4d09-9abb-966dcce0c187"
+      },
+      "reason": "SuccessfulDelete",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:53Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-7d56c4cc4f",
+        "namespace": "selfheal",
+        "resourceVersion": "3737",
+        "uid": "cabadede-8e4a-4361-ab0b-18903260f332"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:53Z",
+      "message": "Created pod: demo-web-7d56c4cc4f-79nmr",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:53Z",
+        "name": "demo-web-7d56c4cc4f.18e25b499583695f",
+        "namespace": "selfheal",
+        "resourceVersion": "3749",
+        "uid": "16d8fa17-b216-46ba-870a-a5f88634f372"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:13:05Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-7d56c4cc4f",
+        "namespace": "selfheal",
+        "resourceVersion": "3813",
+        "uid": "cabadede-8e4a-4361-ab0b-18903260f332"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:13:05Z",
+      "message": "Created pod: demo-web-7d56c4cc4f-lbd5c",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:13:05Z",
+        "name": "demo-web-7d56c4cc4f.18e25b4c55cf437b",
+        "namespace": "selfheal",
+        "resourceVersion": "3818",
+        "uid": "9c1112e1-0331-46f3-9e2e-dc642355c7a6"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:14:22Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-7d56c4cc4f",
+        "namespace": "selfheal",
+        "resourceVersion": "3997",
+        "uid": "cabadede-8e4a-4361-ab0b-18903260f332"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:22Z",
+      "message": "Deleted pod: demo-web-7d56c4cc4f-lbd5c",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:14:22Z",
+        "name": "demo-web-7d56c4cc4f.18e25b5e41bb3dde",
+        "namespace": "selfheal",
+        "resourceVersion": "4001",
+        "uid": "864c7786-a28a-4b9f-9ed0-c0d8c3747ef1"
+      },
+      "reason": "SuccessfulDelete",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:14:36Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-7d56c4cc4f",
+        "namespace": "selfheal",
+        "resourceVersion": "4073",
+        "uid": "cabadede-8e4a-4361-ab0b-18903260f332"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:36Z",
+      "message": "Deleted pod: demo-web-7d56c4cc4f-79nmr",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:14:36Z",
+        "name": "demo-web-7d56c4cc4f.18e25b6183c98c2f",
+        "namespace": "selfheal",
+        "resourceVersion": "4077",
+        "uid": "d7779ae1-9f20-49b1-a27d-6d9c1c68b33a"
+      },
+      "reason": "SuccessfulDelete",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:00Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-7d56c4cc4f",
+        "namespace": "selfheal",
+        "resourceVersion": "4415",
+        "uid": "cabadede-8e4a-4361-ab0b-18903260f332"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:00Z",
+      "message": "Created pod: demo-web-7d56c4cc4f-prxvd",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:00Z",
+        "name": "demo-web-7d56c4cc4f.18e25b91159dbfa5",
+        "namespace": "selfheal",
+        "resourceVersion": "4426",
+        "uid": "25a0095f-98a0-47e0-9615-da5ab9bc8374"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:13Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-7d56c4cc4f",
+        "namespace": "selfheal",
+        "resourceVersion": "4489",
+        "uid": "cabadede-8e4a-4361-ab0b-18903260f332"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:13Z",
+      "message": "Created pod: demo-web-7d56c4cc4f-phzg5",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:13Z",
+        "name": "demo-web-7d56c4cc4f.18e25b940b6a6d35",
+        "namespace": "selfheal",
+        "resourceVersion": "4500",
+        "uid": "34b382f3-6507-4dc4-baac-5af2544f808b"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:14:10Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-52t9d",
+        "namespace": "selfheal",
+        "resourceVersion": "3947",
+        "uid": "4a457824-9b9f-4d1e-86be-1b279716a594"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:10Z",
+      "message": "Successfully assigned selfheal/demo-web-84fb8db64-52t9d to selfheal-control-plane",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:14:10Z",
+        "name": "demo-web-84fb8db64-52t9d.18e25b5b7554d485",
+        "namespace": "selfheal",
+        "resourceVersion": "3952",
+        "uid": "25cb9aee-80c1-46aa-a496-4313e08e1536"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:14:10Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-52t9d",
+        "namespace": "selfheal",
+        "resourceVersion": "3951",
+        "uid": "4a457824-9b9f-4d1e-86be-1b279716a594"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:10Z",
+      "message": "Container image \"selfheal-web:v1\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:14:10Z",
+        "name": "demo-web-84fb8db64-52t9d.18e25b5b97b0f9ad",
+        "namespace": "selfheal",
+        "resourceVersion": "3956",
+        "uid": "773f07b7-f471-4683-8a4f-478ddc8892bd"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:14:10Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-52t9d",
+        "namespace": "selfheal",
+        "resourceVersion": "3951",
+        "uid": "4a457824-9b9f-4d1e-86be-1b279716a594"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:10Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:14:10Z",
+        "name": "demo-web-84fb8db64-52t9d.18e25b5b99da4a30",
+        "namespace": "selfheal",
+        "resourceVersion": "3958",
+        "uid": "a1918e6a-f083-40bf-a85b-7af5b89e27d4"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:14:10Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-52t9d",
+        "namespace": "selfheal",
+        "resourceVersion": "3951",
+        "uid": "4a457824-9b9f-4d1e-86be-1b279716a594"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:10Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:14:10Z",
+        "name": "demo-web-84fb8db64-52t9d.18e25b5ba2f4f12d",
+        "namespace": "selfheal",
+        "resourceVersion": "3959",
+        "uid": "e951f6fd-5dce-4f4c-af00-a2562e030568"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 3,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:14:10Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-52t9d",
+        "namespace": "selfheal",
+        "resourceVersion": "3951",
+        "uid": "4a457824-9b9f-4d1e-86be-1b279716a594"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:11Z",
+      "message": "Readiness probe failed: Get \"http://10.244.0.19:8080/ready\": dial tcp 10.244.0.19:8080: connect: connection refused",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:14:10Z",
+        "name": "demo-web-84fb8db64-52t9d.18e25b5ba32ada95",
+        "namespace": "selfheal",
+        "resourceVersion": "3967",
+        "uid": "986dd84b-c948-479d-b725-a39cabe48192"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 8,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:14:12Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-52t9d",
+        "namespace": "selfheal",
+        "resourceVersion": "3951",
+        "uid": "4a457824-9b9f-4d1e-86be-1b279716a594"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:19Z",
+      "message": "Readiness probe failed: HTTP probe failed with statuscode: 503",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:14:12Z",
+        "name": "demo-web-84fb8db64-52t9d.18e25b5c1b4104ae",
+        "namespace": "selfheal",
+        "resourceVersion": "3987",
+        "uid": "9e855cbb-a34f-4799-9553-e0c6a794a27a"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:16:29Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-52t9d",
+        "namespace": "selfheal",
+        "resourceVersion": "3951",
+        "uid": "4a457824-9b9f-4d1e-86be-1b279716a594"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:16:29Z",
+      "message": "Stopping container web",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:16:29Z",
+        "name": "demo-web-84fb8db64-52t9d.18e25b7bfaf219f8",
+        "namespace": "selfheal",
+        "resourceVersion": "4245",
+        "uid": "4416a970-0ec4-4abb-bb8e-9a93191c20bf"
+      },
+      "reason": "Killing",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:59:31Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-77rxw",
+        "namespace": "selfheal",
+        "resourceVersion": "2758",
+        "uid": "72ec7f75-9aa0-4fbb-bf77-a4708ce8edf9"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:59:31Z",
+      "message": "Successfully assigned selfheal/demo-web-84fb8db64-77rxw to selfheal-control-plane",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:59:31Z",
+        "name": "demo-web-84fb8db64-77rxw.18e25a8ecf99790c",
+        "namespace": "selfheal",
+        "resourceVersion": "2766",
+        "uid": "aec30ab4-e551-4940-a816-061a06d7953c"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:59:31Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-77rxw",
+        "namespace": "selfheal",
+        "resourceVersion": "2763",
+        "uid": "72ec7f75-9aa0-4fbb-bf77-a4708ce8edf9"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:59:31Z",
+      "message": "Container image \"selfheal-web:v1\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:59:31Z",
+        "name": "demo-web-84fb8db64-77rxw.18e25a8efda66c77",
+        "namespace": "selfheal",
+        "resourceVersion": "2771",
+        "uid": "372a4bd8-0f6d-4997-b55b-7ebd0ffb4783"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:59:31Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-77rxw",
+        "namespace": "selfheal",
+        "resourceVersion": "2763",
+        "uid": "72ec7f75-9aa0-4fbb-bf77-a4708ce8edf9"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:59:31Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:59:31Z",
+        "name": "demo-web-84fb8db64-77rxw.18e25a8f01135454",
+        "namespace": "selfheal",
+        "resourceVersion": "2773",
+        "uid": "68565dbe-ba1c-489c-ab56-cf0ce34cd213"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:59:32Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-77rxw",
+        "namespace": "selfheal",
+        "resourceVersion": "2763",
+        "uid": "72ec7f75-9aa0-4fbb-bf77-a4708ce8edf9"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:59:32Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:59:32Z",
+        "name": "demo-web-84fb8db64-77rxw.18e25a8f0d9131ec",
+        "namespace": "selfheal",
+        "resourceVersion": "2774",
+        "uid": "ed89fe41-553d-45c0-94c8-4b18a69890de"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 3,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:59:32Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-77rxw",
+        "namespace": "selfheal",
+        "resourceVersion": "2763",
+        "uid": "72ec7f75-9aa0-4fbb-bf77-a4708ce8edf9"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:59:34Z",
+      "message": "Readiness probe failed: Get \"http://10.244.0.12:8080/ready\": dial tcp 10.244.0.12:8080: connect: connection refused",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:59:32Z",
+        "name": "demo-web-84fb8db64-77rxw.18e25a8f0ddc7907",
+        "namespace": "selfheal",
+        "resourceVersion": "2780",
+        "uid": "03502e64-4868-41c0-a8e4-dd17987af2d0"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 8,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:59:35Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-77rxw",
+        "namespace": "selfheal",
+        "resourceVersion": "2763",
+        "uid": "72ec7f75-9aa0-4fbb-bf77-a4708ce8edf9"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:59:42Z",
+      "message": "Readiness probe failed: HTTP probe failed with statuscode: 503",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:59:35Z",
+        "name": "demo-web-84fb8db64-77rxw.18e25a8fd44015e2",
+        "namespace": "selfheal",
+        "resourceVersion": "2810",
+        "uid": "59409a03-2228-4bd1-835d-19d17f4c07a9"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:11:05Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-77rxw",
+        "namespace": "selfheal",
+        "resourceVersion": "2763",
+        "uid": "72ec7f75-9aa0-4fbb-bf77-a4708ce8edf9"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:11:05Z",
+      "message": "Stopping container web",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:11:05Z",
+        "name": "demo-web-84fb8db64-77rxw.18e25b3064ce920a",
+        "namespace": "selfheal",
+        "resourceVersion": "3409",
+        "uid": "94d87f2f-294d-458e-9546-65ae758e207f"
+      },
+      "reason": "Killing",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:14:22Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-dtqpc",
+        "namespace": "selfheal",
+        "resourceVersion": "4010",
+        "uid": "e71a4482-9529-49bd-881e-7a7c2a7a40a3"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:22Z",
+      "message": "Successfully assigned selfheal/demo-web-84fb8db64-dtqpc to selfheal-control-plane",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:14:22Z",
+        "name": "demo-web-84fb8db64-dtqpc.18e25b5e43e1842b",
+        "namespace": "selfheal",
+        "resourceVersion": "4015",
+        "uid": "a4c85976-1556-44f9-8896-d037a79255ad"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:14:22Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-dtqpc",
+        "namespace": "selfheal",
+        "resourceVersion": "4012",
+        "uid": "e71a4482-9529-49bd-881e-7a7c2a7a40a3"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:22Z",
+      "message": "Container image \"selfheal-web:v1\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:14:22Z",
+        "name": "demo-web-84fb8db64-dtqpc.18e25b5e65b5d1ba",
+        "namespace": "selfheal",
+        "resourceVersion": "4019",
+        "uid": "40e1b94b-1c31-4185-b46c-949e587febea"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:14:22Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-dtqpc",
+        "namespace": "selfheal",
+        "resourceVersion": "4012",
+        "uid": "e71a4482-9529-49bd-881e-7a7c2a7a40a3"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:22Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:14:22Z",
+        "name": "demo-web-84fb8db64-dtqpc.18e25b5e67c1efcc",
+        "namespace": "selfheal",
+        "resourceVersion": "4021",
+        "uid": "7f3cf0ab-36bf-4545-a0b5-b1ad9e5abc1d"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:14:22Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-dtqpc",
+        "namespace": "selfheal",
+        "resourceVersion": "4012",
+        "uid": "e71a4482-9529-49bd-881e-7a7c2a7a40a3"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:22Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:14:22Z",
+        "name": "demo-web-84fb8db64-dtqpc.18e25b5e70f6d0b8",
+        "namespace": "selfheal",
+        "resourceVersion": "4022",
+        "uid": "707860f0-f293-4f70-b1e2-592d94df5c63"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 3,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:14:22Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-dtqpc",
+        "namespace": "selfheal",
+        "resourceVersion": "4012",
+        "uid": "e71a4482-9529-49bd-881e-7a7c2a7a40a3"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:23Z",
+      "message": "Readiness probe failed: Get \"http://10.244.0.20:8080/ready\": dial tcp 10.244.0.20:8080: connect: connection refused",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:14:22Z",
+        "name": "demo-web-84fb8db64-dtqpc.18e25b5e713fe413",
+        "namespace": "selfheal",
+        "resourceVersion": "4032",
+        "uid": "3ebc0392-882e-4382-8ec4-994db5f3690b"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 8,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:14:24Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-dtqpc",
+        "namespace": "selfheal",
+        "resourceVersion": "4012",
+        "uid": "e71a4482-9529-49bd-881e-7a7c2a7a40a3"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:33Z",
+      "message": "Readiness probe failed: HTTP probe failed with statuscode: 503",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:14:24Z",
+        "name": "demo-web-84fb8db64-dtqpc.18e25b5ee8a72f11",
+        "namespace": "selfheal",
+        "resourceVersion": "4061",
+        "uid": "30e66afd-fcbf-4583-87d5-0e56604eb27e"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:13Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-dtqpc",
+        "namespace": "selfheal",
+        "resourceVersion": "4012",
+        "uid": "e71a4482-9529-49bd-881e-7a7c2a7a40a3"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:13Z",
+      "message": "Stopping container web",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:13Z",
+        "name": "demo-web-84fb8db64-dtqpc.18e25b940a1c4fa0",
+        "namespace": "selfheal",
+        "resourceVersion": "4494",
+        "uid": "7bb7f012-308d-44f6-b7db-9c961533192a"
+      },
+      "reason": "Killing",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:20Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-dtqpc",
+        "namespace": "selfheal",
+        "resourceVersion": "4012",
+        "uid": "e71a4482-9529-49bd-881e-7a7c2a7a40a3"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:20Z",
+      "message": "Readiness probe failed: Get \"http://10.244.0.20:8080/ready\": read tcp 10.244.0.1:44198->10.244.0.20:8080: read: connection reset by peer",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:20Z",
+        "name": "demo-web-84fb8db64-dtqpc.18e25b95ca2455a6",
+        "namespace": "selfheal",
+        "resourceVersion": "4529",
+        "uid": "dd70ad99-400d-4b27-acec-22c4dc466581"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:26Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-hjh9l",
+        "namespace": "selfheal",
+        "resourceVersion": "3649",
+        "uid": "9a513eaf-8f1b-448f-b8a2-44473812c2e2"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:26Z",
+      "message": "Successfully assigned selfheal/demo-web-84fb8db64-hjh9l to selfheal-control-plane",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:26Z",
+        "name": "demo-web-84fb8db64-hjh9l.18e25b4341865c57",
+        "namespace": "selfheal",
+        "resourceVersion": "3654",
+        "uid": "29a26cfc-6920-4aac-a204-2a4836173718"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:26Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-hjh9l",
+        "namespace": "selfheal",
+        "resourceVersion": "3653",
+        "uid": "9a513eaf-8f1b-448f-b8a2-44473812c2e2"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:26Z",
+      "message": "Container image \"selfheal-web:v1\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:26Z",
+        "name": "demo-web-84fb8db64-hjh9l.18e25b4363f3c2e0",
+        "namespace": "selfheal",
+        "resourceVersion": "3660",
+        "uid": "1529a2a5-23ab-4b18-9661-3fdff376d555"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:26Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-hjh9l",
+        "namespace": "selfheal",
+        "resourceVersion": "3653",
+        "uid": "9a513eaf-8f1b-448f-b8a2-44473812c2e2"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:26Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:26Z",
+        "name": "demo-web-84fb8db64-hjh9l.18e25b43665fb7c2",
+        "namespace": "selfheal",
+        "resourceVersion": "3662",
+        "uid": "60d7a77b-a47f-4dc9-aa5d-b5e45c77efb2"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:26Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-hjh9l",
+        "namespace": "selfheal",
+        "resourceVersion": "3653",
+        "uid": "9a513eaf-8f1b-448f-b8a2-44473812c2e2"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:26Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:26Z",
+        "name": "demo-web-84fb8db64-hjh9l.18e25b436f38231c",
+        "namespace": "selfheal",
+        "resourceVersion": "3663",
+        "uid": "22f59a06-bd12-4d9d-8c10-706a2b733aad"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 3,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:26Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-hjh9l",
+        "namespace": "selfheal",
+        "resourceVersion": "3653",
+        "uid": "9a513eaf-8f1b-448f-b8a2-44473812c2e2"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:27Z",
+      "message": "Readiness probe failed: Get \"http://10.244.0.16:8080/ready\": dial tcp 10.244.0.16:8080: connect: connection refused",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:26Z",
+        "name": "demo-web-84fb8db64-hjh9l.18e25b436f8b0bcf",
+        "namespace": "selfheal",
+        "resourceVersion": "3669",
+        "uid": "366ade28-c81c-4bc4-bb6d-0021c4218c27"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 8,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:28Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-hjh9l",
+        "namespace": "selfheal",
+        "resourceVersion": "3653",
+        "uid": "9a513eaf-8f1b-448f-b8a2-44473812c2e2"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:33Z",
+      "message": "Readiness probe failed: HTTP probe failed with statuscode: 503",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:28Z",
+        "name": "demo-web-84fb8db64-hjh9l.18e25b43efbd2cfc",
+        "namespace": "selfheal",
+        "resourceVersion": "3695",
+        "uid": "72251f64-c7dc-4bce-82e9-3b70456ad9e6"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:53Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-hjh9l",
+        "namespace": "selfheal",
+        "resourceVersion": "3653",
+        "uid": "9a513eaf-8f1b-448f-b8a2-44473812c2e2"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:53Z",
+      "message": "Stopping container web",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:53Z",
+        "name": "demo-web-84fb8db64-hjh9l.18e25b4993b0207e",
+        "namespace": "selfheal",
+        "resourceVersion": "3740",
+        "uid": "0166f3c1-bcb7-4066-bcf3-4f42c97a6897"
+      },
+      "reason": "Killing",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:09Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tgp9n",
+        "namespace": "selfheal",
+        "resourceVersion": "3577",
+        "uid": "ae7a43e6-256c-4a71-b898-180cab316049"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:09Z",
+      "message": "Successfully assigned selfheal/demo-web-84fb8db64-tgp9n to selfheal-control-plane",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:09Z",
+        "name": "demo-web-84fb8db64-tgp9n.18e25b3f52baa540",
+        "namespace": "selfheal",
+        "resourceVersion": "3584",
+        "uid": "27e16cbd-ddfd-4551-840c-8c9838dbbea8"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:09Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tgp9n",
+        "namespace": "selfheal",
+        "resourceVersion": "3582",
+        "uid": "ae7a43e6-256c-4a71-b898-180cab316049"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:09Z",
+      "message": "Container image \"selfheal-web:v1\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:09Z",
+        "name": "demo-web-84fb8db64-tgp9n.18e25b3f77985359",
+        "namespace": "selfheal",
+        "resourceVersion": "3591",
+        "uid": "866b1327-ee88-4f97-97ff-b44d88b56822"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:09Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tgp9n",
+        "namespace": "selfheal",
+        "resourceVersion": "3582",
+        "uid": "ae7a43e6-256c-4a71-b898-180cab316049"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:09Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:09Z",
+        "name": "demo-web-84fb8db64-tgp9n.18e25b3f79eac8ec",
+        "namespace": "selfheal",
+        "resourceVersion": "3593",
+        "uid": "9b516945-60d1-42af-a213-7a9be3063e8b"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:10Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tgp9n",
+        "namespace": "selfheal",
+        "resourceVersion": "3582",
+        "uid": "ae7a43e6-256c-4a71-b898-180cab316049"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:10Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:10Z",
+        "name": "demo-web-84fb8db64-tgp9n.18e25b3f84ef6c59",
+        "namespace": "selfheal",
+        "resourceVersion": "3594",
+        "uid": "392dec36-710e-449a-83ed-5df86962687c"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 3,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:10Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tgp9n",
+        "namespace": "selfheal",
+        "resourceVersion": "3582",
+        "uid": "ae7a43e6-256c-4a71-b898-180cab316049"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:11Z",
+      "message": "Readiness probe failed: Get \"http://10.244.0.15:8080/ready\": dial tcp 10.244.0.15:8080: connect: connection refused",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:10Z",
+        "name": "demo-web-84fb8db64-tgp9n.18e25b3f853df9c2",
+        "namespace": "selfheal",
+        "resourceVersion": "3600",
+        "uid": "056b4861-fffd-40b3-ab68-cefd3653a811"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 8,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:12Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tgp9n",
+        "namespace": "selfheal",
+        "resourceVersion": "3582",
+        "uid": "ae7a43e6-256c-4a71-b898-180cab316049"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:23Z",
+      "message": "Readiness probe failed: HTTP probe failed with statuscode: 503",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:12Z",
+        "name": "demo-web-84fb8db64-tgp9n.18e25b4000b27dc1",
+        "namespace": "selfheal",
+        "resourceVersion": "3625",
+        "uid": "1173c417-285a-4934-9a1a-65f58074c795"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:13:05Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tgp9n",
+        "namespace": "selfheal",
+        "resourceVersion": "3582",
+        "uid": "ae7a43e6-256c-4a71-b898-180cab316049"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:13:05Z",
+      "message": "Stopping container web",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:13:05Z",
+        "name": "demo-web-84fb8db64-tgp9n.18e25b4c540914a7",
+        "namespace": "selfheal",
+        "resourceVersion": "3811",
+        "uid": "0932d90c-b48b-417e-a5d8-62db7ef24fb3"
+      },
+      "reason": "Killing",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:16:29Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tngwv",
+        "namespace": "selfheal",
+        "resourceVersion": "4246",
+        "uid": "0ade468a-9fcb-48f4-8861-f19d1be2bacb"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:16:29Z",
+      "message": "Successfully assigned selfheal/demo-web-84fb8db64-tngwv to selfheal-control-plane",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:16:29Z",
+        "name": "demo-web-84fb8db64-tngwv.18e25b7bfca0bf7b",
+        "namespace": "selfheal",
+        "resourceVersion": "4251",
+        "uid": "b9757026-c729-4689-b634-dd7342a9c971"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:16:30Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tngwv",
+        "namespace": "selfheal",
+        "resourceVersion": "4249",
+        "uid": "0ade468a-9fcb-48f4-8861-f19d1be2bacb"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:16:30Z",
+      "message": "Container image \"selfheal-web:v1\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:16:30Z",
+        "name": "demo-web-84fb8db64-tngwv.18e25b7c20e800bc",
+        "namespace": "selfheal",
+        "resourceVersion": "4256",
+        "uid": "ea66dedd-70c4-43d2-85ca-cb6e71daba3d"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:16:30Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tngwv",
+        "namespace": "selfheal",
+        "resourceVersion": "4249",
+        "uid": "0ade468a-9fcb-48f4-8861-f19d1be2bacb"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:16:30Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:16:30Z",
+        "name": "demo-web-84fb8db64-tngwv.18e25b7c235dd6e8",
+        "namespace": "selfheal",
+        "resourceVersion": "4258",
+        "uid": "ed7b97a2-7edb-48f6-b894-3d411ef6df6d"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:16:30Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tngwv",
+        "namespace": "selfheal",
+        "resourceVersion": "4249",
+        "uid": "0ade468a-9fcb-48f4-8861-f19d1be2bacb"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:16:30Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:16:30Z",
+        "name": "demo-web-84fb8db64-tngwv.18e25b7c2dbd8df4",
+        "namespace": "selfheal",
+        "resourceVersion": "4259",
+        "uid": "8e6c987b-46c3-4f6c-bc76-434d2cefe99d"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 3,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:16:30Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tngwv",
+        "namespace": "selfheal",
+        "resourceVersion": "4249",
+        "uid": "0ade468a-9fcb-48f4-8861-f19d1be2bacb"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:16:31Z",
+      "message": "Readiness probe failed: Get \"http://10.244.0.21:8080/ready\": dial tcp 10.244.0.21:8080: connect: connection refused",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:16:30Z",
+        "name": "demo-web-84fb8db64-tngwv.18e25b7c2e225b98",
+        "namespace": "selfheal",
+        "resourceVersion": "4269",
+        "uid": "0f733b21-8520-4282-84f9-a6223b080284"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 8,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:16:32Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tngwv",
+        "namespace": "selfheal",
+        "resourceVersion": "4249",
+        "uid": "0ade468a-9fcb-48f4-8861-f19d1be2bacb"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:16:41Z",
+      "message": "Readiness probe failed: HTTP probe failed with statuscode: 503",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:16:32Z",
+        "name": "demo-web-84fb8db64-tngwv.18e25b7cb52f5cda",
+        "namespace": "selfheal",
+        "resourceVersion": "4294",
+        "uid": "0f4e1b76-3a77-4c81-9c44-1ed08fe22f65"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:00Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tngwv",
+        "namespace": "selfheal",
+        "resourceVersion": "4249",
+        "uid": "0ade468a-9fcb-48f4-8861-f19d1be2bacb"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:00Z",
+      "message": "Stopping container web",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:00Z",
+        "name": "demo-web-84fb8db64-tngwv.18e25b911439b112",
+        "namespace": "selfheal",
+        "resourceVersion": "4416",
+        "uid": "b08e1d5c-2eaa-4546-a0c1-653e46ade18b"
+      },
+      "reason": "Killing",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:05Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tngwv",
+        "namespace": "selfheal",
+        "resourceVersion": "4249",
+        "uid": "0ade468a-9fcb-48f4-8861-f19d1be2bacb"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:05Z",
+      "message": "Readiness probe failed: Get \"http://10.244.0.21:8080/ready\": read tcp 10.244.0.1:52046->10.244.0.21:8080: read: connection reset by peer",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:05Z",
+        "name": "demo-web-84fb8db64-tngwv.18e25b925ebc9832",
+        "namespace": "selfheal",
+        "resourceVersion": "4455",
+        "uid": "ea8399f6-2146-4f16-969a-936e20b4b1de"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:45:56Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tw5b9",
+        "namespace": "selfheal",
+        "resourceVersion": "1579",
+        "uid": "eb5dc9c6-0b6b-4da3-988e-abba3bb563c5"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:45:56Z",
+      "message": "Successfully assigned selfheal/demo-web-84fb8db64-tw5b9 to selfheal-control-plane",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:45:56Z",
+        "name": "demo-web-84fb8db64-tw5b9.18e259d13decd68f",
+        "namespace": "selfheal",
+        "resourceVersion": "1585",
+        "uid": "b4bb2a34-7b98-4f7b-a11a-6cc3eba1bf4f"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:45:57Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tw5b9",
+        "namespace": "selfheal",
+        "resourceVersion": "1583",
+        "uid": "eb5dc9c6-0b6b-4da3-988e-abba3bb563c5"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:45:57Z",
+      "message": "Container image \"selfheal-web:v1\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:45:57Z",
+        "name": "demo-web-84fb8db64-tw5b9.18e259d16bc088ab",
+        "namespace": "selfheal",
+        "resourceVersion": "1591",
+        "uid": "5e389c1f-4a2c-491e-bb42-c95bc3263867"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:45:57Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tw5b9",
+        "namespace": "selfheal",
+        "resourceVersion": "1583",
+        "uid": "eb5dc9c6-0b6b-4da3-988e-abba3bb563c5"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:45:57Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:45:57Z",
+        "name": "demo-web-84fb8db64-tw5b9.18e259d16f909f9f",
+        "namespace": "selfheal",
+        "resourceVersion": "1595",
+        "uid": "ba4a5963-fdd3-448d-b7c0-76d40cdbe00f"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:45:57Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tw5b9",
+        "namespace": "selfheal",
+        "resourceVersion": "1583",
+        "uid": "eb5dc9c6-0b6b-4da3-988e-abba3bb563c5"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:45:57Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:45:57Z",
+        "name": "demo-web-84fb8db64-tw5b9.18e259d17cc0c583",
+        "namespace": "selfheal",
+        "resourceVersion": "1597",
+        "uid": "75193954-ee12-4992-9588-e1ffb4a4002d"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 2,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:45:57Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tw5b9",
+        "namespace": "selfheal",
+        "resourceVersion": "1583",
+        "uid": "eb5dc9c6-0b6b-4da3-988e-abba3bb563c5"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:45:58Z",
+      "message": "Readiness probe failed: Get \"http://10.244.0.7:8080/ready\": dial tcp 10.244.0.7:8080: connect: connection refused",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:45:57Z",
+        "name": "demo-web-84fb8db64-tw5b9.18e259d17d14107a",
+        "namespace": "selfheal",
+        "resourceVersion": "1610",
+        "uid": "798460be-ef31-4210-acd7-f33e50a4493a"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 8,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:45:59Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tw5b9",
+        "namespace": "selfheal",
+        "resourceVersion": "1583",
+        "uid": "eb5dc9c6-0b6b-4da3-988e-abba3bb563c5"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:46:09Z",
+      "message": "Readiness probe failed: HTTP probe failed with statuscode: 503",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:45:59Z",
+        "name": "demo-web-84fb8db64-tw5b9.18e259d1e1748fa8",
+        "namespace": "selfheal",
+        "resourceVersion": "1638",
+        "uid": "9d00792e-9e38-4af1-9780-a627b96a0614"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:47:04Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-tw5b9",
+        "namespace": "selfheal",
+        "resourceVersion": "1583",
+        "uid": "eb5dc9c6-0b6b-4da3-988e-abba3bb563c5"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:47:04Z",
+      "message": "Stopping container web",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:47:04Z",
+        "name": "demo-web-84fb8db64-tw5b9.18e259e0f59c166f",
+        "namespace": "selfheal",
+        "resourceVersion": "1740",
+        "uid": "c77205ff-e716-445c-a2fd-c45a709677e4"
+      },
+      "reason": "Killing",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:47:04Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-xpvfn",
+        "namespace": "selfheal",
+        "resourceVersion": "1742",
+        "uid": "d27703eb-5e22-4e8d-a789-134fce5db2ec"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:47:04Z",
+      "message": "Successfully assigned selfheal/demo-web-84fb8db64-xpvfn to selfheal-control-plane",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:47:04Z",
+        "name": "demo-web-84fb8db64-xpvfn.18e259e0f8511d63",
+        "namespace": "selfheal",
+        "resourceVersion": "1747",
+        "uid": "9331cb45-adea-44f8-b0d6-f0a11fc8e237"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:47:05Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-xpvfn",
+        "namespace": "selfheal",
+        "resourceVersion": "1745",
+        "uid": "d27703eb-5e22-4e8d-a789-134fce5db2ec"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:47:05Z",
+      "message": "Container image \"selfheal-web:v1\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:47:05Z",
+        "name": "demo-web-84fb8db64-xpvfn.18e259e11ef262c0",
+        "namespace": "selfheal",
+        "resourceVersion": "1751",
+        "uid": "2f4d0472-65d5-441e-b51c-357d22ac34a7"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:47:05Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-xpvfn",
+        "namespace": "selfheal",
+        "resourceVersion": "1745",
+        "uid": "d27703eb-5e22-4e8d-a789-134fce5db2ec"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:47:05Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:47:05Z",
+        "name": "demo-web-84fb8db64-xpvfn.18e259e12143daa4",
+        "namespace": "selfheal",
+        "resourceVersion": "1753",
+        "uid": "6d4c15bf-c3b8-4a7e-a529-59ecc223c265"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:47:05Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-xpvfn",
+        "namespace": "selfheal",
+        "resourceVersion": "1745",
+        "uid": "d27703eb-5e22-4e8d-a789-134fce5db2ec"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:47:05Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:47:05Z",
+        "name": "demo-web-84fb8db64-xpvfn.18e259e12c589646",
+        "namespace": "selfheal",
+        "resourceVersion": "1754",
+        "uid": "27127f70-71d7-4350-8dfc-0d55017b1b46"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 3,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:47:05Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-xpvfn",
+        "namespace": "selfheal",
+        "resourceVersion": "1745",
+        "uid": "d27703eb-5e22-4e8d-a789-134fce5db2ec"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:47:06Z",
+      "message": "Readiness probe failed: Get \"http://10.244.0.10:8080/ready\": dial tcp 10.244.0.10:8080: connect: connection refused",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:47:05Z",
+        "name": "demo-web-84fb8db64-xpvfn.18e259e12cadb281",
+        "namespace": "selfheal",
+        "resourceVersion": "1763",
+        "uid": "206fa424-f531-4d77-b94e-3065b60f54f6"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 8,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:47:09Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-xpvfn",
+        "namespace": "selfheal",
+        "resourceVersion": "1745",
+        "uid": "d27703eb-5e22-4e8d-a789-134fce5db2ec"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:47:16Z",
+      "message": "Readiness probe failed: HTTP probe failed with statuscode: 503",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:47:09Z",
+        "name": "demo-web-84fb8db64-xpvfn.18e259e2386d28d5",
+        "namespace": "selfheal",
+        "resourceVersion": "1788",
+        "uid": "6c4e0cb4-8a76-4859-9fa3-fe9b416b1a62"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:59:30Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-xpvfn",
+        "namespace": "selfheal",
+        "resourceVersion": "1745",
+        "uid": "d27703eb-5e22-4e8d-a789-134fce5db2ec"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:59:30Z",
+      "message": "Stopping container web",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:59:30Z",
+        "name": "demo-web-84fb8db64-xpvfn.18e25a8ea5bdbcde",
+        "namespace": "selfheal",
+        "resourceVersion": "2761",
+        "uid": "83f48070-aac0-4a98-be30-63fe28c6b088"
+      },
+      "reason": "Killing",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:59:37Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-xpvfn",
+        "namespace": "selfheal",
+        "resourceVersion": "1745",
+        "uid": "d27703eb-5e22-4e8d-a789-134fce5db2ec"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:59:37Z",
+      "message": "Readiness probe failed: Get \"http://10.244.0.10:8080/ready\": read tcp 10.244.0.1:38518->10.244.0.10:8080: read: connection reset by peer",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:59:37Z",
+        "name": "demo-web-84fb8db64-xpvfn.18e25a905f7a071b",
+        "namespace": "selfheal",
+        "resourceVersion": "2791",
+        "uid": "418fb2b1-1c57-486c-8d4b-18f1c12f8a2b"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:45:56Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-zt42v",
+        "namespace": "selfheal",
+        "resourceVersion": "1577",
+        "uid": "7a46ff1e-2cfa-4371-bf02-832ac812a02a"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:45:56Z",
+      "message": "Successfully assigned selfheal/demo-web-84fb8db64-zt42v to selfheal-control-plane",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:45:56Z",
+        "name": "demo-web-84fb8db64-zt42v.18e259d13e01fcff",
+        "namespace": "selfheal",
+        "resourceVersion": "1586",
+        "uid": "afe6ac0c-6250-40d6-a89d-ad81520dff7c"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:45:57Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-zt42v",
+        "namespace": "selfheal",
+        "resourceVersion": "1582",
+        "uid": "7a46ff1e-2cfa-4371-bf02-832ac812a02a"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:45:57Z",
+      "message": "Container image \"selfheal-web:v1\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:45:57Z",
+        "name": "demo-web-84fb8db64-zt42v.18e259d16c482253",
+        "namespace": "selfheal",
+        "resourceVersion": "1592",
+        "uid": "d80c49b1-6bf9-47bf-8731-2342802d3a88"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:45:57Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-zt42v",
+        "namespace": "selfheal",
+        "resourceVersion": "1582",
+        "uid": "7a46ff1e-2cfa-4371-bf02-832ac812a02a"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:45:57Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:45:57Z",
+        "name": "demo-web-84fb8db64-zt42v.18e259d1706728d6",
+        "namespace": "selfheal",
+        "resourceVersion": "1596",
+        "uid": "033f5bb4-e727-4bb8-9029-0fdb9343c8c7"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:45:57Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-zt42v",
+        "namespace": "selfheal",
+        "resourceVersion": "1582",
+        "uid": "7a46ff1e-2cfa-4371-bf02-832ac812a02a"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:45:57Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:45:57Z",
+        "name": "demo-web-84fb8db64-zt42v.18e259d17d705852",
+        "namespace": "selfheal",
+        "resourceVersion": "1599",
+        "uid": "9e45726f-6d05-42b2-a522-fea73bcbf66d"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 2,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:45:57Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-zt42v",
+        "namespace": "selfheal",
+        "resourceVersion": "1582",
+        "uid": "7a46ff1e-2cfa-4371-bf02-832ac812a02a"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:45:58Z",
+      "message": "Readiness probe failed: Get \"http://10.244.0.8:8080/ready\": dial tcp 10.244.0.8:8080: connect: connection refused",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:45:57Z",
+        "name": "demo-web-84fb8db64-zt42v.18e259d17dba3757",
+        "namespace": "selfheal",
+        "resourceVersion": "1609",
+        "uid": "ef4db175-bc67-419e-993a-150f4288ef18"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 8,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:45:59Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-zt42v",
+        "namespace": "selfheal",
+        "resourceVersion": "1582",
+        "uid": "7a46ff1e-2cfa-4371-bf02-832ac812a02a"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:46:09Z",
+      "message": "Readiness probe failed: HTTP probe failed with statuscode: 503",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:45:59Z",
+        "name": "demo-web-84fb8db64-zt42v.18e259d1e17ddb7e",
+        "namespace": "selfheal",
+        "resourceVersion": "1637",
+        "uid": "2819cf0f-b434-4aca-a049-7c44e84fcb4c"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:11:17Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{web}",
+        "kind": "Pod",
+        "name": "demo-web-84fb8db64-zt42v",
+        "namespace": "selfheal",
+        "resourceVersion": "1582",
+        "uid": "7a46ff1e-2cfa-4371-bf02-832ac812a02a"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:11:17Z",
+      "message": "Stopping container web",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:11:17Z",
+        "name": "demo-web-84fb8db64-zt42v.18e25b332e95142e",
+        "namespace": "selfheal",
+        "resourceVersion": "3479",
+        "uid": "48368448-4413-429a-8622-6ed256813ff5"
+      },
+      "reason": "Killing",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:45:56Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-84fb8db64",
+        "namespace": "selfheal",
+        "resourceVersion": "1571",
+        "uid": "c3ee6312-fde4-412e-bd30-5aa195865a7d"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:45:56Z",
+      "message": "Created pod: demo-web-84fb8db64-zt42v",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:45:56Z",
+        "name": "demo-web-84fb8db64.18e259d13ce483e7",
+        "namespace": "selfheal",
+        "resourceVersion": "1578",
+        "uid": "95ed2a73-697c-4b0a-851d-35a4c8f032b9"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:45:56Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-84fb8db64",
+        "namespace": "selfheal",
+        "resourceVersion": "1571",
+        "uid": "c3ee6312-fde4-412e-bd30-5aa195865a7d"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:45:56Z",
+      "message": "Created pod: demo-web-84fb8db64-tw5b9",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:45:56Z",
+        "name": "demo-web-84fb8db64.18e259d13d5d34f7",
+        "namespace": "selfheal",
+        "resourceVersion": "1581",
+        "uid": "414a1c97-c49e-46ab-8cab-119dee5626a6"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:47:04Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-84fb8db64",
+        "namespace": "selfheal",
+        "resourceVersion": "1652",
+        "uid": "c3ee6312-fde4-412e-bd30-5aa195865a7d"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:47:04Z",
+      "message": "Created pod: demo-web-84fb8db64-xpvfn",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:47:04Z",
+        "name": "demo-web-84fb8db64.18e259e0f780b05f",
+        "namespace": "selfheal",
+        "resourceVersion": "1743",
+        "uid": "f5111746-31be-472e-967f-bbfaf77b9cf9"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:59:30Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-84fb8db64",
+        "namespace": "selfheal",
+        "resourceVersion": "1798",
+        "uid": "c3ee6312-fde4-412e-bd30-5aa195865a7d"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:59:30Z",
+      "message": "Created pod: demo-web-84fb8db64-77rxw",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:59:30Z",
+        "name": "demo-web-84fb8db64.18e25a8ea702c1eb",
+        "namespace": "selfheal",
+        "resourceVersion": "2762",
+        "uid": "35c2852b-c9de-48b9-a7eb-c0e1282f214d"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:11:05Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-84fb8db64",
+        "namespace": "selfheal",
+        "resourceVersion": "3401",
+        "uid": "c3ee6312-fde4-412e-bd30-5aa195865a7d"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:11:05Z",
+      "message": "Deleted pod: demo-web-84fb8db64-77rxw",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:11:05Z",
+        "name": "demo-web-84fb8db64.18e25b3064b23726",
+        "namespace": "selfheal",
+        "resourceVersion": "3406",
+        "uid": "614164f3-3a71-4b59-8203-059e32dafaf7"
+      },
+      "reason": "SuccessfulDelete",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:11:17Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-84fb8db64",
+        "namespace": "selfheal",
+        "resourceVersion": "3471",
+        "uid": "c3ee6312-fde4-412e-bd30-5aa195865a7d"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:11:17Z",
+      "message": "Deleted pod: demo-web-84fb8db64-zt42v",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:11:17Z",
+        "name": "demo-web-84fb8db64.18e25b332e77d1db",
+        "namespace": "selfheal",
+        "resourceVersion": "3478",
+        "uid": "7fee21ae-d913-42ce-ae03-315e9d79c9db"
+      },
+      "reason": "SuccessfulDelete",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:09Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-84fb8db64",
+        "namespace": "selfheal",
+        "resourceVersion": "3569",
+        "uid": "c3ee6312-fde4-412e-bd30-5aa195865a7d"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:09Z",
+      "message": "Created pod: demo-web-84fb8db64-tgp9n",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:09Z",
+        "name": "demo-web-84fb8db64.18e25b3f51e60439",
+        "namespace": "selfheal",
+        "resourceVersion": "3580",
+        "uid": "e92c26b0-e2d6-44b2-995d-af47ef5a1d5c"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:26Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-84fb8db64",
+        "namespace": "selfheal",
+        "resourceVersion": "3644",
+        "uid": "c3ee6312-fde4-412e-bd30-5aa195865a7d"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:26Z",
+      "message": "Created pod: demo-web-84fb8db64-hjh9l",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:26Z",
+        "name": "demo-web-84fb8db64.18e25b4340ee4c85",
+        "namespace": "selfheal",
+        "resourceVersion": "3650",
+        "uid": "888455cd-8e59-49e2-bc06-8ad049d409d9"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:53Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-84fb8db64",
+        "namespace": "selfheal",
+        "resourceVersion": "3735",
+        "uid": "c3ee6312-fde4-412e-bd30-5aa195865a7d"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:12:53Z",
+      "message": "Deleted pod: demo-web-84fb8db64-hjh9l",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:53Z",
+        "name": "demo-web-84fb8db64.18e25b49939ef465",
+        "namespace": "selfheal",
+        "resourceVersion": "3738",
+        "uid": "16dcd25f-20d0-4bf2-a28f-c7d14f7bafa0"
+      },
+      "reason": "SuccessfulDelete",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:13:05Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-84fb8db64",
+        "namespace": "selfheal",
+        "resourceVersion": "3803",
+        "uid": "c3ee6312-fde4-412e-bd30-5aa195865a7d"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:13:05Z",
+      "message": "Deleted pod: demo-web-84fb8db64-tgp9n",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:13:05Z",
+        "name": "demo-web-84fb8db64.18e25b4c53f57a8a",
+        "namespace": "selfheal",
+        "resourceVersion": "3807",
+        "uid": "a3587e40-29a9-4a7f-8a11-e7c08cd48297"
+      },
+      "reason": "SuccessfulDelete",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:14:10Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-84fb8db64",
+        "namespace": "selfheal",
+        "resourceVersion": "3945",
+        "uid": "c3ee6312-fde4-412e-bd30-5aa195865a7d"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:10Z",
+      "message": "Created pod: demo-web-84fb8db64-52t9d",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:14:10Z",
+        "name": "demo-web-84fb8db64.18e25b5b74b1dab3",
+        "namespace": "selfheal",
+        "resourceVersion": "3949",
+        "uid": "85e11298-93c5-4cbc-91d7-68a2390ad7b8"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:14:22Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-84fb8db64",
+        "namespace": "selfheal",
+        "resourceVersion": "4006",
+        "uid": "c3ee6312-fde4-412e-bd30-5aa195865a7d"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:22Z",
+      "message": "Created pod: demo-web-84fb8db64-dtqpc",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:14:22Z",
+        "name": "demo-web-84fb8db64.18e25b5e4363c0d7",
+        "namespace": "selfheal",
+        "resourceVersion": "4011",
+        "uid": "8ff1c776-5d4b-4045-a76a-751707e342ec"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:16:29Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-84fb8db64",
+        "namespace": "selfheal",
+        "resourceVersion": "4072",
+        "uid": "c3ee6312-fde4-412e-bd30-5aa195865a7d"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:16:29Z",
+      "message": "Created pod: demo-web-84fb8db64-tngwv",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:16:29Z",
+        "name": "demo-web-84fb8db64.18e25b7bfbec1fe1",
+        "namespace": "selfheal",
+        "resourceVersion": "4248",
+        "uid": "a9e61db8-5a99-4cb3-aa75-8d0810b79310"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:00Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-84fb8db64",
+        "namespace": "selfheal",
+        "resourceVersion": "4412",
+        "uid": "c3ee6312-fde4-412e-bd30-5aa195865a7d"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:00Z",
+      "message": "Deleted pod: demo-web-84fb8db64-tngwv",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:00Z",
+        "name": "demo-web-84fb8db64.18e25b9113afb731",
+        "namespace": "selfheal",
+        "resourceVersion": "4418",
+        "uid": "c0dd06ca-e315-4f1d-9fa4-bce0e299f568"
+      },
+      "reason": "SuccessfulDelete",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:18:13Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "demo-web-84fb8db64",
+        "namespace": "selfheal",
+        "resourceVersion": "4485",
+        "uid": "c3ee6312-fde4-412e-bd30-5aa195865a7d"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:13Z",
+      "message": "Deleted pod: demo-web-84fb8db64-dtqpc",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:13Z",
+        "name": "demo-web-84fb8db64.18e25b940a05bf33",
+        "namespace": "selfheal",
+        "resourceVersion": "4491",
+        "uid": "823d5a95-8892-4fde-b893-916a1180de58"
+      },
+      "reason": "SuccessfulDelete",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:45:56Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "demo-web",
+        "namespace": "selfheal",
+        "resourceVersion": "1569",
+        "uid": "3a758d6d-d135-4245-b83a-1552fe186d98"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:45:56Z",
+      "message": "Scaled up replica set demo-web-84fb8db64 from 0 to 2",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:45:56Z",
+        "name": "demo-web.18e259d13b984b8a",
+        "namespace": "selfheal",
+        "resourceVersion": "1575",
+        "uid": "3ced0229-df46-4b0f-ab55-5109084acd25"
+      },
+      "reason": "ScalingReplicaSet",
+      "reportingComponent": "deployment-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 3,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:10:52Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "demo-web",
+        "namespace": "selfheal",
+        "resourceVersion": "3348",
+        "uid": "3a758d6d-d135-4245-b83a-1552fe186d98"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:00Z",
+      "message": "Scaled up replica set demo-web-7d56c4cc4f from 0 to 1",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:10:52Z",
+        "name": "demo-web.18e25b2d946256b3",
+        "namespace": "selfheal",
+        "resourceVersion": "4423",
+        "uid": "16fb9ce6-9075-4287-8f56-4e09c1800b33"
+      },
+      "reason": "ScalingReplicaSet",
+      "reportingComponent": "deployment-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 3,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:11:05Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "demo-web",
+        "namespace": "selfheal",
+        "resourceVersion": "3397",
+        "uid": "3a758d6d-d135-4245-b83a-1552fe186d98"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:00Z",
+      "message": "Scaled down replica set demo-web-84fb8db64 from 2 to 1",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:11:05Z",
+        "name": "demo-web.18e25b3063b70b10",
+        "namespace": "selfheal",
+        "resourceVersion": "4414",
+        "uid": "e0d7db0c-c634-4ee5-bbbe-a70575369c83"
+      },
+      "reason": "ScalingReplicaSet",
+      "reportingComponent": "deployment-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 3,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:11:05Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "demo-web",
+        "namespace": "selfheal",
+        "resourceVersion": "3403",
+        "uid": "3a758d6d-d135-4245-b83a-1552fe186d98"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:13Z",
+      "message": "Scaled up replica set demo-web-7d56c4cc4f from 1 to 2",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:11:05Z",
+        "name": "demo-web.18e25b306530415b",
+        "namespace": "selfheal",
+        "resourceVersion": "4497",
+        "uid": "363d1a6c-2931-4271-b5c9-fbaec9cfaae4"
+      },
+      "reason": "ScalingReplicaSet",
+      "reportingComponent": "deployment-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 3,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:11:17Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "demo-web",
+        "namespace": "selfheal",
+        "resourceVersion": "3466",
+        "uid": "3a758d6d-d135-4245-b83a-1552fe186d98"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:18:13Z",
+      "message": "Scaled down replica set demo-web-84fb8db64 from 1 to 0",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:11:17Z",
+        "name": "demo-web.18e25b332ddeef27",
+        "namespace": "selfheal",
+        "resourceVersion": "4488",
+        "uid": "82997ce2-fc64-4a57-bee1-030a94109e05"
+      },
+      "reason": "ScalingReplicaSet",
+      "reportingComponent": "deployment-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 2,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:09Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "demo-web",
+        "namespace": "selfheal",
+        "resourceVersion": "3563",
+        "uid": "3a758d6d-d135-4245-b83a-1552fe186d98"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:22Z",
+      "message": "Scaled down replica set demo-web-7d56c4cc4f from 2 to 1",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:09Z",
+        "name": "demo-web.18e25b3f4f3368d5",
+        "namespace": "selfheal",
+        "resourceVersion": "3999",
+        "uid": "946125f0-25a8-460e-a6cc-df2ac3c87752"
+      },
+      "reason": "ScalingReplicaSet",
+      "reportingComponent": "deployment-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 2,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:09Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "demo-web",
+        "namespace": "selfheal",
+        "resourceVersion": "3565",
+        "uid": "3a758d6d-d135-4245-b83a-1552fe186d98"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:09Z",
+      "message": "Scaled up replica set demo-web-84fb8db64 from 0 to 1",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:09Z",
+        "name": "demo-web.18e25b3f501021aa",
+        "namespace": "selfheal",
+        "resourceVersion": "3946",
+        "uid": "013e8777-6004-4d11-9908-e906dbdaee4e"
+      },
+      "reason": "ScalingReplicaSet",
+      "reportingComponent": "deployment-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 2,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:26Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "demo-web",
+        "namespace": "selfheal",
+        "resourceVersion": "3634",
+        "uid": "3a758d6d-d135-4245-b83a-1552fe186d98"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:36Z",
+      "message": "Scaled down replica set demo-web-7d56c4cc4f from 1 to 0",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:26Z",
+        "name": "demo-web.18e25b433ecd72d8",
+        "namespace": "selfheal",
+        "resourceVersion": "4076",
+        "uid": "b4672fee-94bf-4bd1-9a39-23ec639b81ac"
+      },
+      "reason": "ScalingReplicaSet",
+      "reportingComponent": "deployment-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 2,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T10:12:26Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "demo-web",
+        "namespace": "selfheal",
+        "resourceVersion": "3634",
+        "uid": "3a758d6d-d135-4245-b83a-1552fe186d98"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T10:14:22Z",
+      "message": "Scaled up replica set demo-web-84fb8db64 from 1 to 2",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:12:26Z",
+        "name": "demo-web.18e25b4340091d20",
+        "namespace": "selfheal",
+        "resourceVersion": "4009",
+        "uid": "93419e27-1e92-4fd4-a292-a3f4031be74a"
+      },
+      "reason": "ScalingReplicaSet",
+      "reportingComponent": "deployment-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:56:24Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "loadgen",
+        "namespace": "selfheal",
+        "resourceVersion": "2504",
+        "uid": "c7a776a9-da8d-4b2f-bdb9-ed3e2e9e8f11"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:56:24Z",
+      "message": "Successfully assigned selfheal/loadgen to selfheal-control-plane",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:56:24Z",
+        "name": "loadgen.18e25a635ced4324",
+        "namespace": "selfheal",
+        "resourceVersion": "2506",
+        "uid": "83547812-0b59-4d6d-96c0-621552a270a7"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:56:25Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{client}",
+        "kind": "Pod",
+        "name": "loadgen",
+        "namespace": "selfheal",
+        "resourceVersion": "2505",
+        "uid": "c7a776a9-da8d-4b2f-bdb9-ed3e2e9e8f11"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:56:25Z",
+      "message": "Container image \"selfheal-web:v1\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:56:25Z",
+        "name": "loadgen.18e25a638033eaa9",
+        "namespace": "selfheal",
+        "resourceVersion": "2508",
+        "uid": "db84cba6-1845-4405-ada2-8e2ff84f8ba2"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:56:25Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{client}",
+        "kind": "Pod",
+        "name": "loadgen",
+        "namespace": "selfheal",
+        "resourceVersion": "2505",
+        "uid": "c7a776a9-da8d-4b2f-bdb9-ed3e2e9e8f11"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:56:25Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:56:25Z",
+        "name": "loadgen.18e25a63823fb587",
+        "namespace": "selfheal",
+        "resourceVersion": "2510",
+        "uid": "d190d51c-2191-4597-90fe-ea5e52d6838d"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:56:25Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{client}",
+        "kind": "Pod",
+        "name": "loadgen",
+        "namespace": "selfheal",
+        "resourceVersion": "2505",
+        "uid": "c7a776a9-da8d-4b2f-bdb9-ed3e2e9e8f11"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:56:25Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:56:25Z",
+        "name": "loadgen.18e25a6389792510",
+        "namespace": "selfheal",
+        "resourceVersion": "2511",
+        "uid": "7ffdfdf4-135a-4d58-8673-79bac27f08fc"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:46:24Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "request-check",
+        "namespace": "selfheal",
+        "resourceVersion": "1671",
+        "uid": "5406a6e6-ca0b-44ec-a889-0655a3bef292"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:46:24Z",
+      "message": "Successfully assigned selfheal/request-check to selfheal-control-plane",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:46:24Z",
+        "name": "request-check.18e259d79efd2d7e",
+        "namespace": "selfheal",
+        "resourceVersion": "1673",
+        "uid": "07d5c378-e435-419f-9672-4273a956747d"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:46:24Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{request-check}",
+        "kind": "Pod",
+        "name": "request-check",
+        "namespace": "selfheal",
+        "resourceVersion": "1672",
+        "uid": "5406a6e6-ca0b-44ec-a889-0655a3bef292"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:46:24Z",
+      "message": "Container image \"selfheal-web:v1\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:46:24Z",
+        "name": "request-check.18e259d7c603df05",
+        "namespace": "selfheal",
+        "resourceVersion": "1675",
+        "uid": "0cbed038-e21b-4cf7-8fdd-2b6aacf40b3d"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:46:24Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{request-check}",
+        "kind": "Pod",
+        "name": "request-check",
+        "namespace": "selfheal",
+        "resourceVersion": "1672",
+        "uid": "5406a6e6-ca0b-44ec-a889-0655a3bef292"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:46:24Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:46:24Z",
+        "name": "request-check.18e259d7c8928eab",
+        "namespace": "selfheal",
+        "resourceVersion": "1677",
+        "uid": "a35ffb64-e5cc-4959-8cca-cd605edd0084"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:46:25Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{request-check}",
+        "kind": "Pod",
+        "name": "request-check",
+        "namespace": "selfheal",
+        "resourceVersion": "1672",
+        "uid": "5406a6e6-ca0b-44ec-a889-0655a3bef292"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:46:25Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:46:25Z",
+        "name": "request-check.18e259d7d0adad29",
+        "namespace": "selfheal",
+        "resourceVersion": "1678",
+        "uid": "62c69166-995e-4124-abe8-21caadf1a397"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:35:53Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "web-check-84d9654bf4-bl666",
+        "namespace": "selfheal",
+        "resourceVersion": "728",
+        "uid": "5240830b-3890-4638-9e67-6dd4f185cd34"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:35:53Z",
+      "message": "Successfully assigned selfheal/web-check-84d9654bf4-bl666 to selfheal-control-plane",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:35:53Z",
+        "name": "web-check-84d9654bf4-bl666.18e25944b9d5db7d",
+        "namespace": "selfheal",
+        "resourceVersion": "733",
+        "uid": "bf74ff85-2162-4853-bc45-2fb6b2d3b9f9"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:35:53Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{nginx}",
+        "kind": "Pod",
+        "name": "web-check-84d9654bf4-bl666",
+        "namespace": "selfheal",
+        "resourceVersion": "731",
+        "uid": "5240830b-3890-4638-9e67-6dd4f185cd34"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:35:53Z",
+      "message": "Pulling image \"nginx:stable-alpine\"",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:35:53Z",
+        "name": "web-check-84d9654bf4-bl666.18e25944dda6a1c6",
+        "namespace": "selfheal",
+        "resourceVersion": "742",
+        "uid": "91b9296d-5749-442b-992f-ddb55ced5472"
+      },
+      "reason": "Pulling",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:36:09Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{nginx}",
+        "kind": "Pod",
+        "name": "web-check-84d9654bf4-bl666",
+        "namespace": "selfheal",
+        "resourceVersion": "731",
+        "uid": "5240830b-3890-4638-9e67-6dd4f185cd34"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:36:09Z",
+      "message": "Successfully pulled image \"nginx:stable-alpine\" in 15.118s (15.118s including waiting). Image size: 26073200 bytes.",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:36:09Z",
+        "name": "web-check-84d9654bf4-bl666.18e2594862cc5fc3",
+        "namespace": "selfheal",
+        "resourceVersion": "771",
+        "uid": "09153e61-afb9-40f9-a45d-092ed696c569"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:36:09Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{nginx}",
+        "kind": "Pod",
+        "name": "web-check-84d9654bf4-bl666",
+        "namespace": "selfheal",
+        "resourceVersion": "731",
+        "uid": "5240830b-3890-4638-9e67-6dd4f185cd34"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:36:09Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:36:09Z",
+        "name": "web-check-84d9654bf4-bl666.18e259486568b1af",
+        "namespace": "selfheal",
+        "resourceVersion": "772",
+        "uid": "268f2f58-8d31-49cd-9d50-cfa61dfa8920"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:36:09Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{nginx}",
+        "kind": "Pod",
+        "name": "web-check-84d9654bf4-bl666",
+        "namespace": "selfheal",
+        "resourceVersion": "731",
+        "uid": "5240830b-3890-4638-9e67-6dd4f185cd34"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:36:09Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:36:09Z",
+        "name": "web-check-84d9654bf4-bl666.18e259486c2ef92e",
+        "namespace": "selfheal",
+        "resourceVersion": "775",
+        "uid": "69f671d8-80f5-42b8-8002-f7b420936770"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:39:57Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{nginx}",
+        "kind": "Pod",
+        "name": "web-check-84d9654bf4-bl666",
+        "namespace": "selfheal",
+        "resourceVersion": "731",
+        "uid": "5240830b-3890-4638-9e67-6dd4f185cd34"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:39:57Z",
+      "message": "Stopping container nginx",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:39:57Z",
+        "name": "web-check-84d9654bf4-bl666.18e2597dae9213e3",
+        "namespace": "selfheal",
+        "resourceVersion": "1095",
+        "uid": "7af03d27-047e-4b13-9e85-615cfd2731bc"
+      },
+      "reason": "Killing",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:35:53Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "web-check-84d9654bf4-nfg9c",
+        "namespace": "selfheal",
+        "resourceVersion": "730",
+        "uid": "60d664fe-9b5a-47a1-bc73-463a380988c4"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:35:53Z",
+      "message": "Successfully assigned selfheal/web-check-84d9654bf4-nfg9c to selfheal-control-plane",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:35:53Z",
+        "name": "web-check-84d9654bf4-nfg9c.18e25944ba74fe73",
+        "namespace": "selfheal",
+        "resourceVersion": "737",
+        "uid": "ed8aaea5-6f13-46c8-bfb6-5227414d69e2"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:35:53Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{nginx}",
+        "kind": "Pod",
+        "name": "web-check-84d9654bf4-nfg9c",
+        "namespace": "selfheal",
+        "resourceVersion": "735",
+        "uid": "60d664fe-9b5a-47a1-bc73-463a380988c4"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:35:53Z",
+      "message": "Pulling image \"nginx:stable-alpine\"",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:35:53Z",
+        "name": "web-check-84d9654bf4-nfg9c.18e25944ddc19938",
+        "namespace": "selfheal",
+        "resourceVersion": "744",
+        "uid": "efe43e6b-19ae-4092-b7f9-34b3721619d0"
+      },
+      "reason": "Pulling",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:36:11Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{nginx}",
+        "kind": "Pod",
+        "name": "web-check-84d9654bf4-nfg9c",
+        "namespace": "selfheal",
+        "resourceVersion": "735",
+        "uid": "60d664fe-9b5a-47a1-bc73-463a380988c4"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:36:11Z",
+      "message": "Successfully pulled image \"nginx:stable-alpine\" in 2.309s (17.426s including waiting). Image size: 26073200 bytes.",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:36:11Z",
+        "name": "web-check-84d9654bf4-nfg9c.18e25948ec762572",
+        "namespace": "selfheal",
+        "resourceVersion": "784",
+        "uid": "90b96049-e33b-4f1c-bfe6-4abd2ff4858d"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:36:11Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{nginx}",
+        "kind": "Pod",
+        "name": "web-check-84d9654bf4-nfg9c",
+        "namespace": "selfheal",
+        "resourceVersion": "735",
+        "uid": "60d664fe-9b5a-47a1-bc73-463a380988c4"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:36:11Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:36:11Z",
+        "name": "web-check-84d9654bf4-nfg9c.18e25948ee913b8f",
+        "namespace": "selfheal",
+        "resourceVersion": "785",
+        "uid": "c7570171-063d-4a45-a875-dcfd18f6f1ad"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:36:11Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{nginx}",
+        "kind": "Pod",
+        "name": "web-check-84d9654bf4-nfg9c",
+        "namespace": "selfheal",
+        "resourceVersion": "735",
+        "uid": "60d664fe-9b5a-47a1-bc73-463a380988c4"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:36:11Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:36:11Z",
+        "name": "web-check-84d9654bf4-nfg9c.18e25948f54db6ca",
+        "namespace": "selfheal",
+        "resourceVersion": "786",
+        "uid": "3d951a5d-a9bc-4cb5-b7ee-c9461558f605"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:39:57Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{nginx}",
+        "kind": "Pod",
+        "name": "web-check-84d9654bf4-nfg9c",
+        "namespace": "selfheal",
+        "resourceVersion": "735",
+        "uid": "60d664fe-9b5a-47a1-bc73-463a380988c4"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:39:57Z",
+      "message": "Stopping container nginx",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:39:57Z",
+        "name": "web-check-84d9654bf4-nfg9c.18e2597dae6be288",
+        "namespace": "selfheal",
+        "resourceVersion": "1093",
+        "uid": "de40d28a-79c1-4af3-83a5-e0356eae0a6c"
+      },
+      "reason": "Killing",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "selfheal-control-plane",
+      "source": {
+        "component": "kubelet",
+        "host": "selfheal-control-plane"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:35:53Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "web-check-84d9654bf4",
+        "namespace": "selfheal",
+        "resourceVersion": "725",
+        "uid": "e6fb7bb3-a555-4c2c-9386-f122d1156212"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:35:53Z",
+      "message": "Created pod: web-check-84d9654bf4-bl666",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:35:53Z",
+        "name": "web-check-84d9654bf4.18e25944b953befc",
+        "namespace": "selfheal",
+        "resourceVersion": "729",
+        "uid": "0a6448c5-a138-444f-a2a8-caf867fb0e33"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:35:53Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "web-check-84d9654bf4",
+        "namespace": "selfheal",
+        "resourceVersion": "725",
+        "uid": "e6fb7bb3-a555-4c2c-9386-f122d1156212"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:35:53Z",
+      "message": "Created pod: web-check-84d9654bf4-nfg9c",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:35:53Z",
+        "name": "web-check-84d9654bf4.18e25944b9d3a1b0",
+        "namespace": "selfheal",
+        "resourceVersion": "734",
+        "uid": "9e710d64-c3c5-4d86-9980-db45efed9018"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-27T09:35:53Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "web-check",
+        "namespace": "selfheal",
+        "resourceVersion": "724",
+        "uid": "90eccee8-926f-4a14-a3c3-a74432ba727b"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-27T09:35:53Z",
+      "message": "Scaled up replica set web-check-84d9654bf4 from 0 to 2",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T09:35:53Z",
+        "name": "web-check.18e25944b8415e1e",
+        "namespace": "selfheal",
+        "resourceVersion": "727",
+        "uid": "6786590b-0c87-4b77-bdb2-7b251b0b049f"
+      },
+      "reason": "ScalingReplicaSet",
+      "reportingComponent": "deployment-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "type": "Normal"
+    }
+  ],
+  "kind": "List",
+  "metadata": {
+    "resourceVersion": ""
+  }
+}

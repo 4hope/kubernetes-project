@@ -1,0 +1,25 @@
+{
+  "original": [
+    "20261027T095645_523791Z_baseline",
+    "20261027T095911_910504Z_delete",
+    "20261027T101035_021564Z_rollout-a",
+    "20261027T101208_483384Z_rollout-b",
+    "20261027T101409_407603Z_baseline",
+    "20261027T101611_735510Z_delete",
+    "20261027T101740_429408Z_rollout-b",
+    "20261027T101911_188594Z_rollout-a",
+    "20261027T102140_686671Z_baseline",
+    "20261027T102339_874369Z_delete",
+    "20261027T102509_275571Z_rollout-a",
+    "20261027T102639_473378Z_rollout-b"
+  ],
+  "pressure_capacity_session": "20261029_async_confirmation_04",
+  "pressure_rollout_session": "20261029_async_rollout_05",
+  "followup_delete": [
+    "20261029T063411_342679Z_delete",
+    "20261029T093102_562859Z_delete",
+    "20261029T095656_765332Z_delete"
+  ],
+  "setup_failures": ["20261029T060916_163315Z_delete"],
+  "notes": "Cohorts are fixed before analysis. Follow-up demos, setup failure and pilot sessions remain on disk but are not pooled into the original 3-repeat comparison. All six pressure rollout repeats remain included, including pre-update failures."
+}

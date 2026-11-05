@@ -1,0 +1,203 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "annotations": {
+      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Pod\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"loadgen\"},\"name\":\"loadgen\",\"namespace\":\"selfheal\"},\"spec\":{\"automountServiceAccountToken\":false,\"containers\":[{\"command\":[\"python\",\"-c\",\"import time; time.sleep(86400)\"],\"image\":\"selfheal-web:v1\",\"imagePullPolicy\":\"Never\",\"name\":\"client\",\"resources\":{\"limits\":{\"cpu\":\"500m\",\"memory\":\"128Mi\"},\"requests\":{\"cpu\":\"100m\",\"memory\":\"64Mi\"}},\"volumeMounts\":[{\"mountPath\":\"/scripts\",\"name\":\"scripts\",\"readOnly\":true}]}],\"restartPolicy\":\"Never\",\"volumes\":[{\"configMap\":{\"name\":\"measurement-scripts\"},\"name\":\"scripts\"}]}}\n"
+    },
+    "creationTimestamp": "2026-11-05T01:10:11Z",
+    "generation": 1,
+    "labels": {
+      "app": "loadgen"
+    },
+    "name": "loadgen",
+    "namespace": "selfheal",
+    "resourceVersion": "47382",
+    "uid": "7df1417b-2c1f-401e-8420-c1f6b85f1fc5"
+  },
+  "spec": {
+    "automountServiceAccountToken": false,
+    "containers": [
+      {
+        "command": [
+          "python",
+          "-c",
+          "import time; time.sleep(86400)"
+        ],
+        "image": "selfheal-web:v1",
+        "imagePullPolicy": "Never",
+        "name": "client",
+        "resources": {
+          "limits": {
+            "cpu": "500m",
+            "memory": "128Mi"
+          },
+          "requests": {
+            "cpu": "100m",
+            "memory": "64Mi"
+          }
+        },
+        "terminationMessagePath": "/dev/termination-log",
+        "terminationMessagePolicy": "File",
+        "volumeMounts": [
+          {
+            "mountPath": "/scripts",
+            "name": "scripts",
+            "readOnly": true
+          }
+        ]
+      }
+    ],
+    "dnsPolicy": "ClusterFirst",
+    "enableServiceLinks": true,
+    "nodeName": "selfheal-control-plane",
+    "preemptionPolicy": "PreemptLowerPriority",
+    "priority": 0,
+    "restartPolicy": "Never",
+    "schedulerName": "default-scheduler",
+    "securityContext": {},
+    "serviceAccount": "default",
+    "serviceAccountName": "default",
+    "terminationGracePeriodSeconds": 30,
+    "tolerations": [
+      {
+        "effect": "NoExecute",
+        "key": "node.kubernetes.io/not-ready",
+        "operator": "Exists",
+        "tolerationSeconds": 300
+      },
+      {
+        "effect": "NoExecute",
+        "key": "node.kubernetes.io/unreachable",
+        "operator": "Exists",
+        "tolerationSeconds": 300
+      }
+    ],
+    "volumes": [
+      {
+        "configMap": {
+          "defaultMode": 420,
+          "name": "measurement-scripts"
+        },
+        "name": "scripts"
+      }
+    ]
+  },
+  "status": {
+    "allocatedResources": {
+      "cpu": "100m",
+      "memory": "64Mi"
+    },
+    "conditions": [
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-05T01:10:11Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "PodReadyToStartContainers"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-05T01:10:11Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "Initialized"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-05T01:10:11Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "Ready"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-05T01:10:11Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "ContainersReady"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-05T01:10:11Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "PodScheduled"
+      }
+    ],
+    "containerStatuses": [
+      {
+        "allocatedResources": {
+          "cpu": "100m",
+          "memory": "64Mi"
+        },
+        "containerID": "containerd://8a41562ac78023526dbbf7c384e2ccd89fc6c337ac78443d5aa2efce676a1ed0",
+        "image": "docker.io/library/selfheal-web:v1",
+        "imageID": "docker.io/library/import-2026-11-05@sha256:8a48f4d1d782384fcad4f01da2cb7152183716d383daafa27610c67050d3bbbf",
+        "lastState": {},
+        "name": "client",
+        "ready": true,
+        "resources": {
+          "limits": {
+            "cpu": "500m",
+            "memory": "128Mi"
+          },
+          "requests": {
+            "cpu": "100m",
+            "memory": "64Mi"
+          }
+        },
+        "restartCount": 0,
+        "started": true,
+        "state": {
+          "running": {
+            "startedAt": "2026-11-05T01:10:11Z"
+          }
+        },
+        "user": {
+          "linux": {
+            "gid": 0,
+            "supplementalGroups": [
+              0
+            ],
+            "uid": 10001
+          }
+        },
+        "volumeMounts": [
+          {
+            "mountPath": "/scripts",
+            "name": "scripts",
+            "readOnly": true,
+            "recursiveReadOnly": "Disabled"
+          }
+        ]
+      }
+    ],
+    "hostIP": "172.18.0.2",
+    "hostIPs": [
+      {
+        "ip": "172.18.0.2"
+      }
+    ],
+    "observedGeneration": 1,
+    "phase": "Running",
+    "podIP": "10.244.0.7",
+    "podIPs": [
+      {
+        "ip": "10.244.0.7"
+      }
+    ],
+    "qosClass": "Burstable",
+    "resources": {
+      "limits": {
+        "cpu": "500m",
+        "memory": "128Mi"
+      },
+      "requests": {
+        "cpu": "79m",
+        "memory": "64Mi"
+      }
+    },
+    "startTime": "2026-11-05T01:10:11Z"
+  }
+}

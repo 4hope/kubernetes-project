@@ -1,0 +1,575 @@
+{
+  "session": "experiments/autoscaling/results/20261105_hpa_01",
+  "parameters": {
+    "repeats": 3,
+    "low_rate": 10,
+    "high_rate": 400,
+    "low_seconds": 60,
+    "high_seconds": 150,
+    "recovery_seconds": 150,
+    "sample_period_s": 5,
+    "workers": 512,
+    "timeout_s": 1
+  },
+  "hpa_spec": {
+    "behavior": {
+      "scaleDown": {
+        "policies": [
+          {
+            "periodSeconds": 15,
+            "type": "Percent",
+            "value": 100
+          }
+        ],
+        "selectPolicy": "Max",
+        "stabilizationWindowSeconds": 60
+      },
+      "scaleUp": {
+        "policies": [
+          {
+            "periodSeconds": 15,
+            "type": "Pods",
+            "value": 4
+          },
+          {
+            "periodSeconds": 15,
+            "type": "Percent",
+            "value": 100
+          }
+        ],
+        "selectPolicy": "Max",
+        "stabilizationWindowSeconds": 0
+      }
+    },
+    "maxReplicas": 6,
+    "metrics": [
+      {
+        "resource": {
+          "name": "cpu",
+          "target": {
+            "averageUtilization": 60,
+            "type": "Utilization"
+          }
+        },
+        "type": "Resource"
+      }
+    ],
+    "minReplicas": 2,
+    "scaleTargetRef": {
+      "apiVersion": "apps/v1",
+      "kind": "Deployment",
+      "name": "demo-autoscale"
+    }
+  },
+  "runs": [
+    {
+      "run": "repeat-1",
+      "phases": {
+        "low": {
+          "name": "low",
+          "rate": 10,
+          "duration_s": 60,
+          "start_s": 0.6781163200000719,
+          "alignment": "runner receipt of client-start message",
+          "end_s": 61.49620671799994,
+          "scheduled_requests": 600,
+          "sent_requests": 600,
+          "generator_errors": 0,
+          "failed_requests": 0,
+          "failure_percent": 0.0,
+          "successful_latency_p50_ms": 1.863227999820083,
+          "successful_latency_p95_ms": 2.3523709999153652,
+          "max_schedule_delay_ms": 2.6670050001029733,
+          "schedule_delay_p95_ms": 1.5127689999161475,
+          "versions": {
+            "v1": 600
+          },
+          "serving_pods": {
+            "demo-autoscale-565b9b7d85-rdgsg": 298,
+            "demo-autoscale-565b9b7d85-np8zj": 302
+          },
+          "validation_issues": [],
+          "request_error_counts": {},
+          "observed_desired": [
+            2
+          ],
+          "observed_ready": [
+            2
+          ],
+          "hpa_cpu_utilization_range_percent": [
+            2,
+            9
+          ],
+          "scaling_limited_samples": 0
+        },
+        "high": {
+          "name": "high",
+          "rate": 400,
+          "duration_s": 150,
+          "start_s": 62.12885183599997,
+          "alignment": "runner receipt of client-start message",
+          "end_s": 212.96018404999995,
+          "scheduled_requests": 60000,
+          "sent_requests": 60000,
+          "generator_errors": 0,
+          "failed_requests": 6,
+          "failure_percent": 0.01,
+          "successful_latency_p50_ms": 1.2209980000079668,
+          "successful_latency_p95_ms": 1.7468870000811876,
+          "max_schedule_delay_ms": 18.99454000005818,
+          "schedule_delay_p95_ms": 1.131216999894491,
+          "versions": {
+            "v1": 59994
+          },
+          "serving_pods": {
+            "demo-autoscale-565b9b7d85-rdgsg": 16326,
+            "demo-autoscale-565b9b7d85-np8zj": 16186,
+            "demo-autoscale-565b9b7d85-ff6h2": 7161,
+            "demo-autoscale-565b9b7d85-7h4ls": 6627,
+            "demo-autoscale-565b9b7d85-qgxd9": 6934,
+            "demo-autoscale-565b9b7d85-jcs2q": 6760
+          },
+          "validation_issues": [],
+          "request_error_counts": {
+            "TimeoutError: ": 6
+          },
+          "observed_desired": [
+            2,
+            6
+          ],
+          "observed_ready": [
+            2,
+            6
+          ],
+          "hpa_cpu_utilization_range_percent": [
+            9,
+            207
+          ],
+          "scaling_limited_samples": 18
+        },
+        "recovery": {
+          "name": "recovery",
+          "rate": 10,
+          "duration_s": 150,
+          "start_s": 213.6039955189999,
+          "alignment": "runner receipt of client-start message",
+          "end_s": 364.5339791860001,
+          "scheduled_requests": 1500,
+          "sent_requests": 1500,
+          "generator_errors": 0,
+          "failed_requests": 0,
+          "failure_percent": 0.0,
+          "successful_latency_p50_ms": 1.878228999885323,
+          "successful_latency_p95_ms": 2.4278369996864058,
+          "max_schedule_delay_ms": 2.714134000052937,
+          "schedule_delay_p95_ms": 1.425750999715092,
+          "versions": {
+            "v1": 1500
+          },
+          "serving_pods": {
+            "demo-autoscale-565b9b7d85-np8zj": 453,
+            "demo-autoscale-565b9b7d85-jcs2q": 122,
+            "demo-autoscale-565b9b7d85-7h4ls": 146,
+            "demo-autoscale-565b9b7d85-rdgsg": 500,
+            "demo-autoscale-565b9b7d85-ff6h2": 132,
+            "demo-autoscale-565b9b7d85-qgxd9": 147
+          },
+          "validation_issues": [],
+          "request_error_counts": {},
+          "observed_desired": [
+            2,
+            6
+          ],
+          "observed_ready": [
+            2,
+            6
+          ],
+          "hpa_cpu_utilization_range_percent": [
+            4,
+            81
+          ],
+          "scaling_limited_samples": 4
+        }
+      },
+      "controller_rescale_events": [
+        "New size: 6; reason: cpu resource utilization (percentage of request) above target",
+        "New size: 2; reason: All metrics below target"
+      ],
+      "scale_up_desired_s": 35.98870463600019,
+      "scale_up_ready_s": 50.92619862200013,
+      "scale_down_to_two_s": 80.90624090900019,
+      "max_desired": 6,
+      "max_ready": 6,
+      "max_sample_gap_s": 5.1372668379999595,
+      "metrics_samples": 75
+    },
+    {
+      "run": "repeat-2",
+      "phases": {
+        "low": {
+          "name": "low",
+          "rate": 10,
+          "duration_s": 60,
+          "start_s": 0.7400712179996844,
+          "alignment": "runner receipt of client-start message",
+          "end_s": 61.57846140399988,
+          "scheduled_requests": 600,
+          "sent_requests": 600,
+          "generator_errors": 0,
+          "failed_requests": 0,
+          "failure_percent": 0.0,
+          "successful_latency_p50_ms": 1.8541730000833923,
+          "successful_latency_p95_ms": 2.3917879998407443,
+          "max_schedule_delay_ms": 3.2548469996980245,
+          "schedule_delay_p95_ms": 1.4109409997224986,
+          "versions": {
+            "v1": 600
+          },
+          "serving_pods": {
+            "demo-autoscale-565b9b7d85-rdgsg": 295,
+            "demo-autoscale-565b9b7d85-np8zj": 305
+          },
+          "validation_issues": [],
+          "request_error_counts": {},
+          "observed_desired": [
+            2
+          ],
+          "observed_ready": [
+            2
+          ],
+          "hpa_cpu_utilization_range_percent": [
+            8,
+            10
+          ],
+          "scaling_limited_samples": 0
+        },
+        "high": {
+          "name": "high",
+          "rate": 400,
+          "duration_s": 150,
+          "start_s": 62.30518560199971,
+          "alignment": "runner receipt of client-start message",
+          "end_s": 213.17577523,
+          "scheduled_requests": 60000,
+          "sent_requests": 60000,
+          "generator_errors": 0,
+          "failed_requests": 12,
+          "failure_percent": 0.02,
+          "successful_latency_p50_ms": 1.258957999652921,
+          "successful_latency_p95_ms": 1.7800629998419026,
+          "max_schedule_delay_ms": 5.072262999874511,
+          "schedule_delay_p95_ms": 1.138341999940451,
+          "versions": {
+            "v1": 59988
+          },
+          "serving_pods": {
+            "demo-autoscale-565b9b7d85-np8zj": 15363,
+            "demo-autoscale-565b9b7d85-rdgsg": 15352,
+            "demo-autoscale-565b9b7d85-gqcng": 7326,
+            "demo-autoscale-565b9b7d85-9h95z": 7255,
+            "demo-autoscale-565b9b7d85-t2cpv": 7379,
+            "demo-autoscale-565b9b7d85-4r8zj": 7313
+          },
+          "validation_issues": [],
+          "request_error_counts": {
+            "TimeoutError: ": 12
+          },
+          "observed_desired": [
+            2,
+            6
+          ],
+          "observed_ready": [
+            2,
+            6
+          ],
+          "hpa_cpu_utilization_range_percent": [
+            9,
+            224
+          ],
+          "scaling_limited_samples": 22
+        },
+        "recovery": {
+          "name": "recovery",
+          "rate": 10,
+          "duration_s": 150,
+          "start_s": 213.87625223899977,
+          "alignment": "runner receipt of client-start message",
+          "end_s": 364.817250997,
+          "scheduled_requests": 1500,
+          "sent_requests": 1500,
+          "generator_errors": 0,
+          "failed_requests": 0,
+          "failure_percent": 0.0,
+          "successful_latency_p50_ms": 1.866803000211803,
+          "successful_latency_p95_ms": 2.468948000114324,
+          "max_schedule_delay_ms": 9.735405000270703,
+          "schedule_delay_p95_ms": 1.5735880001557234,
+          "versions": {
+            "v1": 1500
+          },
+          "serving_pods": {
+            "demo-autoscale-565b9b7d85-9h95z": 156,
+            "demo-autoscale-565b9b7d85-np8zj": 478,
+            "demo-autoscale-565b9b7d85-gqcng": 135,
+            "demo-autoscale-565b9b7d85-rdgsg": 443,
+            "demo-autoscale-565b9b7d85-4r8zj": 141,
+            "demo-autoscale-565b9b7d85-t2cpv": 147
+          },
+          "validation_issues": [],
+          "request_error_counts": {},
+          "observed_desired": [
+            2,
+            6
+          ],
+          "observed_ready": [
+            2,
+            6
+          ],
+          "hpa_cpu_utilization_range_percent": [
+            4,
+            82
+          ],
+          "scaling_limited_samples": 6
+        }
+      },
+      "controller_rescale_events": [
+        "New size: 6; reason: cpu resource utilization (percentage of request) above target",
+        "New size: 2; reason: All metrics below target"
+      ],
+      "scale_up_desired_s": 30.953425945000163,
+      "scale_up_ready_s": 40.92354701400018,
+      "scale_down_to_two_s": 90.967641018,
+      "max_desired": 6,
+      "max_ready": 6,
+      "max_sample_gap_s": 5.1707768050000595,
+      "metrics_samples": 75
+    },
+    {
+      "run": "repeat-3",
+      "phases": {
+        "low": {
+          "name": "low",
+          "rate": 10,
+          "duration_s": 60,
+          "start_s": 0.7092260399999759,
+          "alignment": "runner receipt of client-start message",
+          "end_s": 61.51505045800013,
+          "scheduled_requests": 600,
+          "sent_requests": 600,
+          "generator_errors": 0,
+          "failed_requests": 0,
+          "failure_percent": 0.0,
+          "successful_latency_p50_ms": 1.8980709996867517,
+          "successful_latency_p95_ms": 2.3899150000943337,
+          "max_schedule_delay_ms": 2.667021000342995,
+          "schedule_delay_p95_ms": 1.4253740001546333,
+          "versions": {
+            "v1": 600
+          },
+          "serving_pods": {
+            "demo-autoscale-565b9b7d85-np8zj": 319,
+            "demo-autoscale-565b9b7d85-rdgsg": 281
+          },
+          "validation_issues": [],
+          "request_error_counts": {},
+          "observed_desired": [
+            2
+          ],
+          "observed_ready": [
+            2
+          ],
+          "hpa_cpu_utilization_range_percent": [
+            8,
+            9
+          ],
+          "scaling_limited_samples": 0
+        },
+        "high": {
+          "name": "high",
+          "rate": 400,
+          "duration_s": 150,
+          "start_s": 62.155480977000025,
+          "alignment": "runner receipt of client-start message",
+          "end_s": 213.11182546999999,
+          "scheduled_requests": 60000,
+          "sent_requests": 60000,
+          "generator_errors": 0,
+          "failed_requests": 13,
+          "failure_percent": 0.021666666666666667,
+          "successful_latency_p50_ms": 1.2518090002231475,
+          "successful_latency_p95_ms": 1.7660540001998015,
+          "max_schedule_delay_ms": 10.582440999954201,
+          "schedule_delay_p95_ms": 1.1357090000991832,
+          "versions": {
+            "v1": 59987
+          },
+          "serving_pods": {
+            "demo-autoscale-565b9b7d85-np8zj": 14797,
+            "demo-autoscale-565b9b7d85-rdgsg": 14778,
+            "demo-autoscale-565b9b7d85-rknw6": 8078,
+            "demo-autoscale-565b9b7d85-6l7vv": 7837,
+            "demo-autoscale-565b9b7d85-rpzmk": 7753,
+            "demo-autoscale-565b9b7d85-pq96j": 6744
+          },
+          "validation_issues": [],
+          "request_error_counts": {
+            "TimeoutError: ": 13
+          },
+          "observed_desired": [
+            2,
+            5,
+            6
+          ],
+          "observed_ready": [
+            2,
+            5,
+            6
+          ],
+          "hpa_cpu_utilization_range_percent": [
+            8,
+            220
+          ],
+          "scaling_limited_samples": 23
+        },
+        "recovery": {
+          "name": "recovery",
+          "rate": 10,
+          "duration_s": 150,
+          "start_s": 213.836362645,
+          "alignment": "runner receipt of client-start message",
+          "end_s": 364.75219586000003,
+          "scheduled_requests": 1500,
+          "sent_requests": 1500,
+          "generator_errors": 0,
+          "failed_requests": 0,
+          "failure_percent": 0.0,
+          "successful_latency_p50_ms": 1.8486819999452564,
+          "successful_latency_p95_ms": 2.4506360000486893,
+          "max_schedule_delay_ms": 6.715943000202174,
+          "schedule_delay_p95_ms": 1.4658620000744804,
+          "versions": {
+            "v1": 1500
+          },
+          "serving_pods": {
+            "demo-autoscale-565b9b7d85-rpzmk": 117,
+            "demo-autoscale-565b9b7d85-np8zj": 492,
+            "demo-autoscale-565b9b7d85-rknw6": 143,
+            "demo-autoscale-565b9b7d85-pq96j": 149,
+            "demo-autoscale-565b9b7d85-6l7vv": 129,
+            "demo-autoscale-565b9b7d85-rdgsg": 470
+          },
+          "validation_issues": [],
+          "request_error_counts": {},
+          "observed_desired": [
+            2,
+            5,
+            6
+          ],
+          "observed_ready": [
+            2,
+            5,
+            6
+          ],
+          "hpa_cpu_utilization_range_percent": [
+            4,
+            82
+          ],
+          "scaling_limited_samples": 5
+        }
+      },
+      "controller_rescale_events": [
+        "New size: 5; reason: cpu resource utilization (percentage of request) above target",
+        "New size: 6; reason: cpu resource utilization (percentage of request) above target",
+        "New size: 5; reason: All metrics below target",
+        "New size: 2; reason: All metrics below target"
+      ],
+      "scale_up_desired_s": 25.919989129999976,
+      "scale_up_ready_s": 35.91065799900025,
+      "scale_down_to_two_s": 85.9236815270001,
+      "max_desired": 6,
+      "max_ready": 6,
+      "max_sample_gap_s": 5.150023866000083,
+      "metrics_samples": 75
+    }
+  ],
+  "totals": {
+    "low": {
+      "scheduled_requests": 1800,
+      "sent_requests": 1800,
+      "failed_requests": 0,
+      "generator_errors": 0
+    },
+    "high": {
+      "scheduled_requests": 180000,
+      "sent_requests": 180000,
+      "failed_requests": 31,
+      "generator_errors": 0
+    },
+    "recovery": {
+      "scheduled_requests": 4500,
+      "sent_requests": 4500,
+      "failed_requests": 0,
+      "generator_errors": 0
+    }
+  },
+  "validation_issues": [],
+  "raw_sha256": {
+    "experiments/autoscaling/results/20261105_hpa_01/console.log": "8aad5778c5aeb55c298ea481be261e68904d9181d8b164fa1a2a6bd666220125",
+    "experiments/autoscaling/results/20261105_hpa_01/hpa-config.json": "dba7ebf9cb517d35d6879079f111c6fec038b4e32d939c1a104d8a01ae5c4257",
+    "experiments/autoscaling/results/20261105_hpa_01/loadgen-pod.json": "12524a992a6756e2eebb60802a44669ffb66107c5b1f52e3221ca39ef7409fa9",
+    "experiments/autoscaling/results/20261105_hpa_01/metrics-server.json": "03a59f039c372a27491d608882e497d5baddb6a27aaa1c20a3516e7f1fa210f7",
+    "experiments/autoscaling/results/20261105_hpa_01/nodes.json": "b62be167b740ceea25c501fb76a562fbe3c5f4cd8859994fb98c6298f9aa0086",
+    "experiments/autoscaling/results/20261105_hpa_01/original-demo-web-after.json": "857906d89937693b1d08db0a9623108aefac2bc5414ced14f0aa86120fbc2f57",
+    "experiments/autoscaling/results/20261105_hpa_01/original-demo-web.json": "1a90329c1c5f33cf866397da0da85e45506763e9780d96fff6e81f4be37b1244",
+    "experiments/autoscaling/results/20261105_hpa_01/parameters.json": "c2c3efffd51d61d67507efab3524d2d24bef9a828f4d7c8bf9be4907f790af38",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-1/events.json": "96927ebaea21086d17b2ce11b7cd2b7f6d0ad64a40ddce0a110200d349875756",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-1/final-deployment.json": "e34e92fdfd3bce80074bc2801d620b52bfda3c856e62e69948df888884b42ba2",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-1/high/client-events.jsonl": "88a50b315768fe2dd300e08a91da8b6e356041f373b145f357cf27139156b3b9",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-1/high/client-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-1/high/phase.json": "650add48548dc1b8f385cfa4e72c0e103309628b9e6620d26e49479508309ca0",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-1/high/requests.jsonl": "370fd51b73aa9c8f525e4aa0ebd5ac239c8d839f8a55e778e52acf0d97121d50",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-1/initial-deployment.json": "913f6ab83f0da4d97289440e78fd90164c3e66728f9cdea43fea45e2d131a90e",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-1/low/client-events.jsonl": "4194f0876dd4c0ef8297045a7d8005b04ab169f0d05c93a3664f14e509cc093b",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-1/low/client-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-1/low/phase.json": "e895343dce46af11e33b8f4d89dcebbbc7e32bc21a74481a203b559c51b3d716",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-1/low/requests.jsonl": "f36d0531c906d6d72431ad0d0f1757b085d5e101a981fc0e1d9497ba5d55db60",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-1/recovery/client-events.jsonl": "15248024a9924eb8d892a8b05b3dbf9b4b05d287796439309a095a869db238ff",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-1/recovery/client-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-1/recovery/phase.json": "1704c02ebb1b03374218984ee3ee733759fd94b7b866272f0efc33227a169275",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-1/recovery/requests.jsonl": "b3ef1e9d27356cbdb7ad07e33f0a273db33c10844c4988ca871c682a3f5aeaf9",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-1/states.jsonl": "53d9e86bd335f165807188121b480fa64cc394760d04d3deb9581fb1234cb6f1",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-2/events.json": "7b696102b3fe3f7b73d119e804c4f75822b795dc5eebe196dabb2ced4b80afcd",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-2/final-deployment.json": "0aa7906d14c3a3d23de278c6e7a1281d2fd3e6053fce916bebfdcf76bbe4eea8",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-2/high/client-events.jsonl": "81c6b473a70ac02082bccc90285296b6b7aadfa15f34a72ae9de16a5c2939e50",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-2/high/client-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-2/high/phase.json": "23d01e1ae05b9bb8a0fef79be73475f5f6f6d140191731c2bd7d61329ecfa094",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-2/high/requests.jsonl": "5669cffad3b755bd5ef6624f2c71149a038ae7167e094a760bd73c0acbcba9a7",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-2/initial-deployment.json": "e34e92fdfd3bce80074bc2801d620b52bfda3c856e62e69948df888884b42ba2",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-2/low/client-events.jsonl": "09485bdce66c5da69617a8f418c782f16860a4ded5ad0f46be379add7ed322a8",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-2/low/client-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-2/low/phase.json": "95877f8bb4cf61e3b3cafe7c4b906b9ac3be31e4195e7e30cdf4a3923f96478a",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-2/low/requests.jsonl": "be1dc8a2ac50faa7affd97d1a31f2c5e8a60612146a1c49c4e6b03a448e99038",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-2/recovery/client-events.jsonl": "ee2bd65edc4880a1b795382aea0b50a7d2bcf2229309c7d82fb6daa439644ecd",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-2/recovery/client-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-2/recovery/phase.json": "b0d2c3e1711d126ec71569c5b4ce6ea21b9d8fa7e19e61d854a559dd2278741b",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-2/recovery/requests.jsonl": "391abdafa4f25170bbde2cb02cc7c0966971fd600e69f404ff7a99a793e62c4e",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-2/states.jsonl": "0874b273798c3888606f796c2ed39a30641f85c78eebe36b42cf0dfeeb04e99b",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-3/events.json": "da8d487d4fe32590b17a5e560b1dac14a5d55923f59d4c70c541b699ad70a529",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-3/final-deployment.json": "9dbd4a24311925be9a280a2d9bfd17ef1dfb7063cd041caa660cc2712f8aeff2",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-3/high/client-events.jsonl": "9eb849334a696b06a54ce97b771d4ac33abd726af6fc958299f939f22b8a152a",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-3/high/client-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-3/high/phase.json": "fd9b12340b7f15c2c55a23bf5b50c2937c44045599dd62e4afc357843b55fca9",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-3/high/requests.jsonl": "c9fed6f174b48de22ed40048d2b8b2eab223abebd6db91ffd280eb45e25ca95b",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-3/initial-deployment.json": "0aa7906d14c3a3d23de278c6e7a1281d2fd3e6053fce916bebfdcf76bbe4eea8",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-3/low/client-events.jsonl": "36d6236b3a2babea4c61495d3afe9310726d0a9376cd4bd6287ab66428be8b56",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-3/low/client-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-3/low/phase.json": "521ced6fbbfeeea1f2c5559943138c506782d4c0ee94ff00f9e1f32e2c792f18",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-3/low/requests.jsonl": "047426555f0244fdbad70ae71050ede267cdf87af4b93bf1f65d25b2204b56b3",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-3/recovery/client-events.jsonl": "f5d4d19ddff4cc4b7334aff79868fc4cf4fdcbcbb30a5483c848ee6d459c4b3a",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-3/recovery/client-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-3/recovery/phase.json": "add51b13dbbee12e40fc78e3508fc8014af9b61a22c70605fc70ac27d8fd0837",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-3/recovery/requests.jsonl": "ed8f420a112f229d965f1f6fe4dbad504e55646fe9242aaf8aad28461514f550",
+    "experiments/autoscaling/results/20261105_hpa_01/repeat-3/states.jsonl": "2b6f6afb6cbe6452ab0da73015cf6d43697f32387391101fd74d1c8e25d0fc95",
+    "experiments/autoscaling/results/20261105_hpa_01/versions.json": "fb440a8f4ea276e4fd8ddf23f41ca2f3ac4219ac5126adbdb1206d5d279f3dfd"
+  }
+}

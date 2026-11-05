@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="510" height="185" preserveAspectRatio="xMinYMin meet" viewBox="0 0 510 185" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="510" height="185"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-185)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="4" y="43" width="110" height="43" style="stroke: rgb(6%,11%,20%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="21.731" y="70" style="font-family: Helvetica; font-size: 9px;fill: rgb(6%,11%,20%); stroke:none;" transform="translate(0,140) scale(1,-1)">Request generator</text>
+			<text x="26.240000000000002" y="58" style="font-family: Helvetica; font-size: 9px;fill: rgb(6%,11%,20%); stroke:none;" transform="translate(0,116) scale(1,-1)">HTTP client Pod</text>
+			<rect x="192" y="43" width="112" height="43" style="stroke: rgb(6%,11%,20%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="213.242" y="70" style="font-family: Helvetica; font-size: 9px;fill: rgb(6%,11%,20%); stroke:none;" transform="translate(0,140) scale(1,-1)">ClusterIP Service</text>
+			<text x="215.735" y="58" style="font-family: Helvetica; font-size: 9px;fill: rgb(6%,11%,20%); stroke:none;" transform="translate(0,116) scale(1,-1)">demo-web:8080</text>
+			<rect x="395" y="83" width="110" height="43" style="stroke: rgb(6%,11%,20%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="414.981" y="110" style="font-family: Helvetica; font-size: 9px;fill: rgb(6%,11%,20%); stroke:none;" transform="translate(0,220) scale(1,-1)">Application Pod 1</text>
+			<text x="408.7305" y="98" style="font-family: Helvetica; font-size: 9px;fill: rgb(6%,11%,20%); stroke:none;" transform="translate(0,196) scale(1,-1)">version / Pod / ready</text>
+			<rect x="395" y="13" width="110" height="43" style="stroke: rgb(6%,11%,20%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="414.981" y="40" style="font-family: Helvetica; font-size: 9px;fill: rgb(6%,11%,20%); stroke:none;" transform="translate(0,80) scale(1,-1)">Application Pod 2</text>
+			<text x="408.7305" y="28" style="font-family: Helvetica; font-size: 9px;fill: rgb(6%,11%,20%); stroke:none;" transform="translate(0,56) scale(1,-1)">version / Pod / ready</text>
+			<rect x="172" y="137" width="168" height="43" style="stroke: rgb(6%,11%,20%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="205.105" y="164" style="font-family: Helvetica; font-size: 9px;fill: rgb(6%,11%,20%); stroke:none;" transform="translate(0,328) scale(1,-1)">Deployment + ReplicaSet</text>
+			<text x="219.487" y="152" style="font-family: Helvetica; font-size: 9px;fill: rgb(6%,11%,20%); stroke:none;" transform="translate(0,304) scale(1,-1)">desired replicas: 2</text>
+			<path d="M 114,64 L 192,64 Z" style="stroke: rgb(6%,11%,20%); stroke-linecap: butt; stroke-width: 0.9;"/>
+			<polygon points="192 64, 186.7105 66.83218, 186.7105 61.16782" style="stroke: rgb(6%,11%,20%); stroke-linecap: butt; stroke-width: 1; fill: rgb(6%,11%,20%); fill-rule: evenodd;"/>
+			<path d="M 304,64 L 395,104 Z" style="stroke: rgb(6%,11%,20%); stroke-linecap: butt; stroke-width: 0.9;"/>
+			<polygon points="395 104, 389.018 104.4643, 391.2973 99.27874" style="stroke: rgb(6%,11%,20%); stroke-linecap: butt; stroke-width: 1; fill: rgb(6%,11%,20%); fill-rule: evenodd;"/>
+			<path d="M 304,64 L 395,34 Z" style="stroke: rgb(6%,11%,20%); stroke-linecap: butt; stroke-width: 0.9;"/>
+			<polygon points="395 34, 390.8632 38.3459, 389.0897 32.96633" style="stroke: rgb(6%,11%,20%); stroke-linecap: butt; stroke-width: 1; fill: rgb(6%,11%,20%); fill-rule: evenodd;"/>
+			<path d="M 340,151 L 450,126 Z" style="stroke: rgb(6%,11%,20%); stroke-linecap: butt; stroke-width: 0.9; stroke-dasharray: 3, 3;"/>
+			<polygon points="450 126, 445.4697 129.934, 444.2144 124.4105" style="stroke: rgb(6%,11%,20%); stroke-linecap: butt; stroke-width: 1; fill: rgb(6%,11%,20%); fill-rule: evenodd;"/>
+			<path d="M 340,143 L 355,143 Z" style="stroke: rgb(6%,11%,20%); stroke-linecap: butt; stroke-width: 0.9; stroke-dasharray: 3, 3;"/>
+			<path d="M 355,143 L 355,34 Z" style="stroke: rgb(6%,11%,20%); stroke-linecap: butt; stroke-width: 0.9; stroke-dasharray: 3, 3;"/>
+			<path d="M 355,34 L 395,34 Z" style="stroke: rgb(6%,11%,20%); stroke-linecap: butt; stroke-width: 0.9; stroke-dasharray: 3, 3;"/>
+			<polygon points="395 34, 389.7105 36.83218, 389.7105 31.16782" style="stroke: rgb(6%,11%,20%); stroke-linecap: butt; stroke-width: 1; fill: rgb(6%,11%,20%); fill-rule: evenodd;"/>
+			<text x="136" y="74" style="font-family: Helvetica; font-size: 8px;fill: rgb(6%,11%,20%); stroke:none;" transform="translate(0,148) scale(1,-1)">HTTP</text>
+			<text x="8" y="151" style="font-family: Helvetica; font-size: 8px;fill: rgb(6%,11%,20%); stroke:none;" transform="translate(0,302) scale(1,-1)">kubectl / API</text>
+			<path d="M 68,139 L 172,157 Z" style="stroke: rgb(6%,11%,20%); stroke-linecap: butt; stroke-width: 0.9; stroke-dasharray: 3, 3;"/>
+			<polygon points="172 157, 166.305 158.8886, 167.271 153.3072" style="stroke: rgb(6%,11%,20%); stroke-linecap: butt; stroke-width: 1; fill: rgb(6%,11%,20%); fill-rule: evenodd;"/>
+			<text x="8" y="126" style="font-family: Helvetica; font-size: 8px;fill: rgb(6%,11%,20%); stroke:none;" transform="translate(0,252) scale(1,-1)">experiment process</text>
+		</g>
+	</g>
+</svg>

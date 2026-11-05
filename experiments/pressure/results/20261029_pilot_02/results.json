@@ -1,0 +1,93 @@
+[
+  {
+    "directory": "rate-300_repeat-1_n-1_steady",
+    "scheduled_requests": 6000,
+    "sent_requests": 6000,
+    "generator_errors": 0,
+    "failed_requests": 1583,
+    "failure_percent": 26.383333333333333,
+    "successful_latency_p50_ms": 3.350009000087084,
+    "successful_latency_p95_ms": 58.12614000001304,
+    "max_schedule_delay_ms": 376.5781123332985,
+    "schedule_delay_p95_ms": 203.6215853333565,
+    "versions": {
+      "v1": 4417
+    },
+    "serving_pods": {
+      "demo-web-84fb8db64-bdf6q": 4417
+    },
+    "mode": "steady",
+    "replicas": 1,
+    "rate": 300.0,
+    "duration": 20.0,
+    "completion_observed_s": null,
+    "validation_issues": [
+      "p95 scheduling delay exceeds one arrival interval"
+    ],
+    "min_ready": 1,
+    "max_ready": 1,
+    "min_available": 0,
+    "all_attempt_latency_p95_ms": 1003.9164510000091
+  },
+  {
+    "directory": "rate-300_repeat-1_n-2_steady",
+    "scheduled_requests": 6000,
+    "sent_requests": 6000,
+    "generator_errors": 0,
+    "failed_requests": 0,
+    "failure_percent": 0.0,
+    "successful_latency_p50_ms": 1.9346370000903335,
+    "successful_latency_p95_ms": 2.8023449999636796,
+    "max_schedule_delay_ms": 32.088238666639576,
+    "schedule_delay_p95_ms": 0.28589799997469356,
+    "versions": {
+      "v1": 6000
+    },
+    "serving_pods": {
+      "demo-web-84fb8db64-cjgzq": 2849,
+      "demo-web-84fb8db64-bdf6q": 3151
+    },
+    "mode": "steady",
+    "replicas": 2,
+    "rate": 300.0,
+    "duration": 20.0,
+    "completion_observed_s": null,
+    "validation_issues": [],
+    "min_ready": 2,
+    "max_ready": 2,
+    "min_available": 2,
+    "all_attempt_latency_p95_ms": 2.8023449999636796
+  },
+  {
+    "directory": "rate-400_repeat-1_n-2_steady",
+    "scheduled_requests": 8000,
+    "sent_requests": 7999,
+    "generator_errors": 1,
+    "failed_requests": 346,
+    "failure_percent": 4.325540692586573,
+    "successful_latency_p50_ms": 1.8737039999905392,
+    "successful_latency_p95_ms": 65.24198900001466,
+    "max_schedule_delay_ms": 1085.7904069999904,
+    "schedule_delay_p95_ms": 832.6638459999232,
+    "versions": {
+      "v1": 7653
+    },
+    "serving_pods": {
+      "demo-web-84fb8db64-cjgzq": 3723,
+      "demo-web-84fb8db64-bdf6q": 3930
+    },
+    "mode": "steady",
+    "replicas": 2,
+    "rate": 400.0,
+    "duration": 20.0,
+    "completion_observed_s": null,
+    "validation_issues": [
+      "generator saturation",
+      "p95 scheduling delay exceeds one arrival interval"
+    ],
+    "min_ready": 2,
+    "max_ready": 2,
+    "min_available": 2,
+    "all_attempt_latency_p95_ms": 90.20059700003458
+  }
+]

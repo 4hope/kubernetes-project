@@ -1,0 +1,569 @@
+{
+  "apiVersion": "v1",
+  "items": [
+    {
+      "apiVersion": "v1",
+      "kind": "Pod",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:13Z",
+        "generateName": "demo-web-7d56c4cc4f-",
+        "generation": 1,
+        "labels": {
+          "app": "demo-web",
+          "pod-template-hash": "7d56c4cc4f"
+        },
+        "name": "demo-web-7d56c4cc4f-phzg5",
+        "namespace": "selfheal",
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "blockOwnerDeletion": true,
+            "controller": true,
+            "kind": "ReplicaSet",
+            "name": "demo-web-7d56c4cc4f",
+            "uid": "cabadede-8e4a-4361-ab0b-18903260f332"
+          }
+        ],
+        "resourceVersion": "4551",
+        "uid": "fea6849c-e1c8-4167-b80e-64f118dc0787"
+      },
+      "spec": {
+        "containers": [
+          {
+            "env": [
+              {
+                "name": "POD_NAME",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "metadata.name"
+                  }
+                }
+              },
+              {
+                "name": "STARTUP_SECONDS",
+                "value": "8"
+              }
+            ],
+            "image": "selfheal-web:v2",
+            "imagePullPolicy": "Never",
+            "lifecycle": {
+              "preStop": {
+                "exec": {
+                  "command": [
+                    "python",
+                    "-c",
+                    "import time; time.sleep(5)"
+                  ]
+                }
+              }
+            },
+            "name": "web",
+            "ports": [
+              {
+                "containerPort": 8080,
+                "protocol": "TCP"
+              }
+            ],
+            "readinessProbe": {
+              "failureThreshold": 1,
+              "httpGet": {
+                "path": "/ready",
+                "port": 8080,
+                "scheme": "HTTP"
+              },
+              "periodSeconds": 1,
+              "successThreshold": 1,
+              "timeoutSeconds": 1
+            },
+            "resources": {
+              "limits": {
+                "cpu": "250m",
+                "memory": "128Mi"
+              },
+              "requests": {
+                "cpu": "100m",
+                "memory": "64Mi"
+              }
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "volumeMounts": [
+              {
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                "name": "kube-api-access-62zn5",
+                "readOnly": true
+              }
+            ]
+          }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "enableServiceLinks": true,
+        "nodeName": "selfheal-control-plane",
+        "preemptionPolicy": "PreemptLowerPriority",
+        "priority": 0,
+        "restartPolicy": "Always",
+        "schedulerName": "default-scheduler",
+        "securityContext": {},
+        "serviceAccount": "default",
+        "serviceAccountName": "default",
+        "terminationGracePeriodSeconds": 15,
+        "tolerations": [
+          {
+            "effect": "NoExecute",
+            "key": "node.kubernetes.io/not-ready",
+            "operator": "Exists",
+            "tolerationSeconds": 300
+          },
+          {
+            "effect": "NoExecute",
+            "key": "node.kubernetes.io/unreachable",
+            "operator": "Exists",
+            "tolerationSeconds": 300
+          }
+        ],
+        "volumes": [
+          {
+            "name": "kube-api-access-62zn5",
+            "projected": {
+              "defaultMode": 420,
+              "sources": [
+                {
+                  "serviceAccountToken": {
+                    "expirationSeconds": 3607,
+                    "path": "token"
+                  }
+                },
+                {
+                  "configMap": {
+                    "items": [
+                      {
+                        "key": "ca.crt",
+                        "path": "ca.crt"
+                      }
+                    ],
+                    "name": "kube-root-ca.crt"
+                  }
+                },
+                {
+                  "downwardAPI": {
+                    "items": [
+                      {
+                        "fieldRef": {
+                          "apiVersion": "v1",
+                          "fieldPath": "metadata.namespace"
+                        },
+                        "path": "namespace"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "status": {
+        "allocatedResources": {
+          "cpu": "100m",
+          "memory": "64Mi"
+        },
+        "conditions": [
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2026-10-27T10:18:13Z",
+            "observedGeneration": 1,
+            "status": "True",
+            "type": "PodReadyToStartContainers"
+          },
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2026-10-27T10:18:13Z",
+            "observedGeneration": 1,
+            "status": "True",
+            "type": "Initialized"
+          },
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2026-10-27T10:18:25Z",
+            "observedGeneration": 1,
+            "status": "True",
+            "type": "Ready"
+          },
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2026-10-27T10:18:25Z",
+            "observedGeneration": 1,
+            "status": "True",
+            "type": "ContainersReady"
+          },
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2026-10-27T10:18:13Z",
+            "observedGeneration": 1,
+            "status": "True",
+            "type": "PodScheduled"
+          }
+        ],
+        "containerStatuses": [
+          {
+            "allocatedResources": {
+              "cpu": "100m",
+              "memory": "64Mi"
+            },
+            "containerID": "containerd://f5e9b20ab8183ab29e65fb0f5eda9dabbd1c9073a727a70592d20902d4f7ef90",
+            "image": "docker.io/library/selfheal-web:v2",
+            "imageID": "sha256:60cef7d592b753e783b7b7452a142363c71222f8f46b81ac65b32fafe86e6100",
+            "lastState": {},
+            "name": "web",
+            "ready": true,
+            "resources": {
+              "limits": {
+                "cpu": "250m",
+                "memory": "128Mi"
+              },
+              "requests": {
+                "cpu": "100m",
+                "memory": "64Mi"
+              }
+            },
+            "restartCount": 0,
+            "started": true,
+            "state": {
+              "running": {
+                "startedAt": "2026-10-27T10:18:14Z"
+              }
+            },
+            "user": {
+              "linux": {
+                "gid": 0,
+                "supplementalGroups": [
+                  0
+                ],
+                "uid": 10001
+              }
+            },
+            "volumeMounts": [
+              {
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                "name": "kube-api-access-62zn5",
+                "readOnly": true,
+                "recursiveReadOnly": "Disabled"
+              }
+            ]
+          }
+        ],
+        "hostIP": "172.18.0.2",
+        "hostIPs": [
+          {
+            "ip": "172.18.0.2"
+          }
+        ],
+        "observedGeneration": 1,
+        "phase": "Running",
+        "podIP": "10.244.0.23",
+        "podIPs": [
+          {
+            "ip": "10.244.0.23"
+          }
+        ],
+        "qosClass": "Burstable",
+        "resources": {
+          "limits": {
+            "cpu": "250m",
+            "memory": "128Mi"
+          },
+          "requests": {
+            "cpu": "79m",
+            "memory": "64Mi"
+          }
+        },
+        "startTime": "2026-10-27T10:18:13Z"
+      }
+    },
+    {
+      "apiVersion": "v1",
+      "kind": "Pod",
+      "metadata": {
+        "creationTimestamp": "2026-10-27T10:18:00Z",
+        "generateName": "demo-web-7d56c4cc4f-",
+        "generation": 1,
+        "labels": {
+          "app": "demo-web",
+          "pod-template-hash": "7d56c4cc4f"
+        },
+        "name": "demo-web-7d56c4cc4f-prxvd",
+        "namespace": "selfheal",
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "blockOwnerDeletion": true,
+            "controller": true,
+            "kind": "ReplicaSet",
+            "name": "demo-web-7d56c4cc4f",
+            "uid": "cabadede-8e4a-4361-ab0b-18903260f332"
+          }
+        ],
+        "resourceVersion": "4479",
+        "uid": "a908ffe6-899a-47e0-8877-d9a54a657739"
+      },
+      "spec": {
+        "containers": [
+          {
+            "env": [
+              {
+                "name": "POD_NAME",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "metadata.name"
+                  }
+                }
+              },
+              {
+                "name": "STARTUP_SECONDS",
+                "value": "8"
+              }
+            ],
+            "image": "selfheal-web:v2",
+            "imagePullPolicy": "Never",
+            "lifecycle": {
+              "preStop": {
+                "exec": {
+                  "command": [
+                    "python",
+                    "-c",
+                    "import time; time.sleep(5)"
+                  ]
+                }
+              }
+            },
+            "name": "web",
+            "ports": [
+              {
+                "containerPort": 8080,
+                "protocol": "TCP"
+              }
+            ],
+            "readinessProbe": {
+              "failureThreshold": 1,
+              "httpGet": {
+                "path": "/ready",
+                "port": 8080,
+                "scheme": "HTTP"
+              },
+              "periodSeconds": 1,
+              "successThreshold": 1,
+              "timeoutSeconds": 1
+            },
+            "resources": {
+              "limits": {
+                "cpu": "250m",
+                "memory": "128Mi"
+              },
+              "requests": {
+                "cpu": "100m",
+                "memory": "64Mi"
+              }
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "volumeMounts": [
+              {
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                "name": "kube-api-access-4r95q",
+                "readOnly": true
+              }
+            ]
+          }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "enableServiceLinks": true,
+        "nodeName": "selfheal-control-plane",
+        "preemptionPolicy": "PreemptLowerPriority",
+        "priority": 0,
+        "restartPolicy": "Always",
+        "schedulerName": "default-scheduler",
+        "securityContext": {},
+        "serviceAccount": "default",
+        "serviceAccountName": "default",
+        "terminationGracePeriodSeconds": 15,
+        "tolerations": [
+          {
+            "effect": "NoExecute",
+            "key": "node.kubernetes.io/not-ready",
+            "operator": "Exists",
+            "tolerationSeconds": 300
+          },
+          {
+            "effect": "NoExecute",
+            "key": "node.kubernetes.io/unreachable",
+            "operator": "Exists",
+            "tolerationSeconds": 300
+          }
+        ],
+        "volumes": [
+          {
+            "name": "kube-api-access-4r95q",
+            "projected": {
+              "defaultMode": 420,
+              "sources": [
+                {
+                  "serviceAccountToken": {
+                    "expirationSeconds": 3607,
+                    "path": "token"
+                  }
+                },
+                {
+                  "configMap": {
+                    "items": [
+                      {
+                        "key": "ca.crt",
+                        "path": "ca.crt"
+                      }
+                    ],
+                    "name": "kube-root-ca.crt"
+                  }
+                },
+                {
+                  "downwardAPI": {
+                    "items": [
+                      {
+                        "fieldRef": {
+                          "apiVersion": "v1",
+                          "fieldPath": "metadata.namespace"
+                        },
+                        "path": "namespace"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "status": {
+        "allocatedResources": {
+          "cpu": "100m",
+          "memory": "64Mi"
+        },
+        "conditions": [
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2026-10-27T10:18:00Z",
+            "observedGeneration": 1,
+            "status": "True",
+            "type": "PodReadyToStartContainers"
+          },
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2026-10-27T10:18:00Z",
+            "observedGeneration": 1,
+            "status": "True",
+            "type": "Initialized"
+          },
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2026-10-27T10:18:11Z",
+            "observedGeneration": 1,
+            "status": "True",
+            "type": "Ready"
+          },
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2026-10-27T10:18:11Z",
+            "observedGeneration": 1,
+            "status": "True",
+            "type": "ContainersReady"
+          },
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2026-10-27T10:18:00Z",
+            "observedGeneration": 1,
+            "status": "True",
+            "type": "PodScheduled"
+          }
+        ],
+        "containerStatuses": [
+          {
+            "allocatedResources": {
+              "cpu": "100m",
+              "memory": "64Mi"
+            },
+            "containerID": "containerd://a31693323ddbb7a2d3a6e11e12642b6546efa6e64a55b2b86e1300746ce45166",
+            "image": "docker.io/library/selfheal-web:v2",
+            "imageID": "sha256:60cef7d592b753e783b7b7452a142363c71222f8f46b81ac65b32fafe86e6100",
+            "lastState": {},
+            "name": "web",
+            "ready": true,
+            "resources": {
+              "limits": {
+                "cpu": "250m",
+                "memory": "128Mi"
+              },
+              "requests": {
+                "cpu": "100m",
+                "memory": "64Mi"
+              }
+            },
+            "restartCount": 0,
+            "started": true,
+            "state": {
+              "running": {
+                "startedAt": "2026-10-27T10:18:01Z"
+              }
+            },
+            "user": {
+              "linux": {
+                "gid": 0,
+                "supplementalGroups": [
+                  0
+                ],
+                "uid": 10001
+              }
+            },
+            "volumeMounts": [
+              {
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                "name": "kube-api-access-4r95q",
+                "readOnly": true,
+                "recursiveReadOnly": "Disabled"
+              }
+            ]
+          }
+        ],
+        "hostIP": "172.18.0.2",
+        "hostIPs": [
+          {
+            "ip": "172.18.0.2"
+          }
+        ],
+        "observedGeneration": 1,
+        "phase": "Running",
+        "podIP": "10.244.0.22",
+        "podIPs": [
+          {
+            "ip": "10.244.0.22"
+          }
+        ],
+        "qosClass": "Burstable",
+        "resources": {
+          "limits": {
+            "cpu": "250m",
+            "memory": "128Mi"
+          },
+          "requests": {
+            "cpu": "79m",
+            "memory": "64Mi"
+          }
+        },
+        "startTime": "2026-10-27T10:18:00Z"
+      }
+    }
+  ],
+  "kind": "List",
+  "metadata": {
+    "resourceVersion": ""
+  }
+}

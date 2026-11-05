@@ -1,0 +1,8 @@
+{
+  "name": "recovery",
+  "rate": 10,
+  "duration_s": 150,
+  "start_s": 213.87625223899977,
+  "alignment": "runner receipt of client-start message",
+  "end_s": 364.817250997
+}

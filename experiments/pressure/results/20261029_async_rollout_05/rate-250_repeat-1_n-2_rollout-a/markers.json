@@ -1,0 +1,11 @@
+[
+  {
+    "event": "action_started",
+    "elapsed_s": 15.001689770999974
+  },
+  {
+    "event": "completion_observed",
+    "elapsed_s": 40.63278797099997,
+    "since_action_s": 25.63109714799998
+  }
+]

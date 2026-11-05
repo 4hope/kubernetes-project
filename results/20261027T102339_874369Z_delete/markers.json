@@ -1,0 +1,20 @@
+[
+  {
+    "event": "action_started",
+    "mode": "delete",
+    "utc": "2026-10-27T10:23:58.610345+00:00",
+    "elapsed_s": 15.001673118000326,
+    "victim": "demo-web-84fb8db64-m6m92"
+  },
+  {
+    "event": "action_acknowledged",
+    "utc": "2026-10-27T10:23:58.787918+00:00",
+    "elapsed_s": 15.179277350999655
+  },
+  {
+    "event": "completion_observed",
+    "utc": "2026-10-27T10:24:10.051114+00:00",
+    "elapsed_s": 26.442459822000274,
+    "since_action_s": 11.440771357999438
+  }
+]

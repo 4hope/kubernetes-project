@@ -1,0 +1,77 @@
+{
+  "checked_on": "2026-11-05",
+  "environment": "Ubuntu 24.04 / WSL2 / Docker Desktop; kind-selfheal",
+  "unit_tests": {
+    "command": "python3 -B -m unittest discover -s tests -v",
+    "tests": 9,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 17.586,
+    "log": "artifacts/test-output.txt"
+  },
+  "historical_audit": {
+    "completed_runs": 27,
+    "raw_files": 652,
+    "raw_sha256": "ef9b6e38043117fa24b071016b0bb1db205968218085cdd901393f74738aafdb",
+    "issues": []
+  },
+  "setup_modes_checked": [
+    "default",
+    "--pressure"
+  ],
+  "service_check": {
+    "status": "PASS",
+    "ready_pods": [
+      "demo-web-84fb8db64-bnpnr",
+      "demo-web-84fb8db64-npwm5"
+    ],
+    "requests": 20,
+    "versions": {
+      "v1": 20
+    },
+    "serving_pods": {
+      "demo-web-84fb8db64-npwm5": 12,
+      "demo-web-84fb8db64-bnpnr": 8
+    }
+  },
+  "pressure_probe": {
+    "scheduled": 2,
+    "sent": 2,
+    "failed": 0,
+    "purpose": "setup probe only"
+  },
+  "live_deletion": {
+    "run": "artifacts/live-validation/results/20261105T011338_271864Z_delete",
+    "mode": "delete",
+    "rate": 10,
+    "duration_s": 40.0,
+    "scheduled": 400,
+    "sent": 400,
+    "failed": 0,
+    "generator_errors": 0,
+    "p95_ms": 41.16155700000945,
+    "completion_s": 12.02045627900003,
+    "min_ready": 1,
+    "max_ready": 2,
+    "pre_action_scheduled_before_14s": 140,
+    "pre_action_failures_before_14s": 0,
+    "wall_clock_offset_span_s": 0.0995326042175293,
+    "issues": []
+  },
+  "video_included": false,
+  "pdf_body_pages": 4,
+  "pdf_reference_pages": 1,
+  "autoscaling": {
+    "session": "experiments/autoscaling/results/20261105_hpa_01",
+    "runs": 3,
+    "raw_files": 57,
+    "total_attempts": 186300,
+    "failed_requests": 31,
+    "generator_errors": 0,
+    "validation_issues": [],
+    "all_runs_reached_six_and_returned_to_two": true,
+    "original_demo_web_spec_unchanged": true,
+    "metrics_server": "v0.9.1",
+    "results": "artifacts/autoscaling-results.json"
+  }
+}

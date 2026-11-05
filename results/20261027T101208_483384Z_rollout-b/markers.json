@@ -1,0 +1,20 @@
+[
+  {
+    "event": "action_started",
+    "mode": "rollout-b",
+    "utc": "2026-10-27T10:12:53.007306+00:00",
+    "elapsed_s": 15.002350169000238,
+    "victim": null
+  },
+  {
+    "event": "action_acknowledged",
+    "utc": "2026-10-27T10:12:53.180597+00:00",
+    "elapsed_s": 15.175671601999966
+  },
+  {
+    "event": "completion_observed",
+    "utc": "2026-10-27T10:13:17.467398+00:00",
+    "elapsed_s": 39.523084715000095,
+    "since_action_s": 24.520713094999792
+  }
+]

@@ -1,0 +1,35 @@
+Results: experiments/autoscaling/results/20261105_hpa_01
+RESET repeat 1
+LOAD low: 10 requests/s for 60 s
+  t=1.5s desired=2 Ready=2
+LOAD high: 400 requests/s for 150 s
+  t=63.0s desired=2 Ready=2
+  t=98.1s desired=6 Ready=2
+  t=113.1s desired=6 Ready=6
+LOAD recovery: 10 requests/s for 150 s
+  t=214.4s desired=6 Ready=6
+  t=294.5s desired=2 Ready=2
+RESET repeat 2
+LOAD low: 10 requests/s for 60 s
+  t=1.6s desired=2 Ready=2
+LOAD high: 400 requests/s for 150 s
+  t=63.2s desired=2 Ready=2
+  t=93.3s desired=6 Ready=2
+  t=103.2s desired=6 Ready=6
+LOAD recovery: 10 requests/s for 150 s
+  t=214.7s desired=6 Ready=6
+  t=304.8s desired=2 Ready=2
+RESET repeat 3
+LOAD low: 10 requests/s for 60 s
+  t=1.6s desired=2 Ready=2
+LOAD high: 400 requests/s for 150 s
+  t=63.0s desired=2 Ready=2
+  t=88.1s desired=5 Ready=2
+  t=98.1s desired=5 Ready=5
+  t=103.0s desired=6 Ready=5
+  t=113.1s desired=6 Ready=6
+LOAD recovery: 10 requests/s for 150 s
+  t=214.7s desired=6 Ready=6
+  t=284.6s desired=5 Ready=5
+  t=299.8s desired=2 Ready=2
+DONE. Analyze this directory with experiments/autoscaling/analyze.py.

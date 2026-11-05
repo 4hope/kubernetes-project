@@ -1,0 +1,598 @@
+{
+  "apiVersion": "v1",
+  "items": [
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T01:37:45Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "demo-autoscale",
+        "namespace": "selfheal",
+        "resourceVersion": "49702",
+        "uid": "7a00e82c-bd52-49be-87de-0d2bb8464c4f"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T01:37:45Z",
+      "message": "Scaled up replica set demo-autoscale-565b9b7d85 from 0 to 2",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T01:37:45Z",
+        "name": "demo-autoscale.18e502667d6f9652",
+        "namespace": "selfheal",
+        "resourceVersion": "49704",
+        "uid": "af69d78a-bec1-4d77-9bbe-a3e47397fc75"
+      },
+      "reason": "ScalingReplicaSet",
+      "reportingComponent": "deployment-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 2,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T01:37:45Z",
+      "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "demo-autoscale",
+        "namespace": "selfheal",
+        "resourceVersion": "49716",
+        "uid": "ec0231f0-b4ec-4d5a-b964-7b209c2a86ab"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T01:38:00Z",
+      "message": "failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T01:37:45Z",
+        "name": "demo-autoscale.18e5026681732fcb",
+        "namespace": "selfheal",
+        "resourceVersion": "49798",
+        "uid": "a28ecf8f-ae95-4121-a3de-7a22804f30ef"
+      },
+      "reason": "FailedGetResourceMetric",
+      "reportingComponent": "horizontal-pod-autoscaler",
+      "reportingInstance": "",
+      "source": {
+        "component": "horizontal-pod-autoscaler"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 2,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T01:37:45Z",
+      "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "demo-autoscale",
+        "namespace": "selfheal",
+        "resourceVersion": "49716",
+        "uid": "ec0231f0-b4ec-4d5a-b964-7b209c2a86ab"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T01:38:00Z",
+      "message": "invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T01:37:45Z",
+        "name": "demo-autoscale.18e5026681c8c343",
+        "namespace": "selfheal",
+        "resourceVersion": "49799",
+        "uid": "51f337fa-d7c2-4914-85b8-97cfe211dea8"
+      },
+      "reason": "FailedComputeMetricsReplicas",
+      "reportingComponent": "horizontal-pod-autoscaler",
+      "reportingInstance": "",
+      "source": {
+        "component": "horizontal-pod-autoscaler"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T01:38:15Z",
+      "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "demo-autoscale",
+        "namespace": "selfheal",
+        "resourceVersion": "49727",
+        "uid": "ec0231f0-b4ec-4d5a-b964-7b209c2a86ab"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T01:38:15Z",
+      "message": "failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T01:38:15Z",
+        "name": "demo-autoscale.18e5026d7db5cd86",
+        "namespace": "selfheal",
+        "resourceVersion": "49821",
+        "uid": "cf4d228d-beff-4974-b010-16b6833fc3d3"
+      },
+      "reason": "FailedGetResourceMetric",
+      "reportingComponent": "horizontal-pod-autoscaler",
+      "reportingInstance": "",
+      "source": {
+        "component": "horizontal-pod-autoscaler"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T01:38:15Z",
+      "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "demo-autoscale",
+        "namespace": "selfheal",
+        "resourceVersion": "49727",
+        "uid": "ec0231f0-b4ec-4d5a-b964-7b209c2a86ab"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T01:38:15Z",
+      "message": "invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T01:38:15Z",
+        "name": "demo-autoscale.18e5026d7e1f199b",
+        "namespace": "selfheal",
+        "resourceVersion": "49822",
+        "uid": "cfe86158-58a3-48fc-ac08-d00ad5ff588a"
+      },
+      "reason": "FailedComputeMetricsReplicas",
+      "reportingComponent": "horizontal-pod-autoscaler",
+      "reportingInstance": "",
+      "source": {
+        "component": "horizontal-pod-autoscaler"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T01:40:02Z",
+      "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "demo-autoscale",
+        "namespace": "selfheal",
+        "resourceVersion": "49953",
+        "uid": "83030660-aa45-44c2-bfb3-e45da09b33de"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T01:40:02Z",
+      "message": "New size: 6; reason: cpu resource utilization (percentage of request) above target",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T01:40:02Z",
+        "name": "demo-autoscale.18e50286413c10df",
+        "namespace": "selfheal",
+        "resourceVersion": "49981",
+        "uid": "859df8d0-7b75-4849-9b2a-117a825f1472"
+      },
+      "reason": "SuccessfulRescale",
+      "reportingComponent": "horizontal-pod-autoscaler",
+      "reportingInstance": "",
+      "source": {
+        "component": "horizontal-pod-autoscaler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 2,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T01:40:02Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "demo-autoscale",
+        "namespace": "selfheal",
+        "resourceVersion": "49978",
+        "uid": "7a00e82c-bd52-49be-87de-0d2bb8464c4f"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T01:46:05Z",
+      "message": "Scaled up replica set demo-autoscale-565b9b7d85 from 2 to 6",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T01:40:02Z",
+        "name": "demo-autoscale.18e5028641d52068",
+        "namespace": "selfheal",
+        "resourceVersion": "50698",
+        "uid": "8cb26ffa-66ef-4b2e-a9d8-ab898430c0ab"
+      },
+      "reason": "ScalingReplicaSet",
+      "reportingComponent": "deployment-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T01:43:19Z",
+      "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "demo-autoscale",
+        "namespace": "selfheal",
+        "resourceVersion": "50361",
+        "uid": "83030660-aa45-44c2-bfb3-e45da09b33de"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T01:43:19Z",
+      "message": "New size: 2; reason: All metrics below target",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T01:43:19Z",
+        "name": "demo-autoscale.18e502b41989ae1c",
+        "namespace": "selfheal",
+        "resourceVersion": "50385",
+        "uid": "e75236c4-c073-4c85-be93-3323c541108f"
+      },
+      "reason": "SuccessfulRescale",
+      "reportingComponent": "horizontal-pod-autoscaler",
+      "reportingInstance": "",
+      "source": {
+        "component": "horizontal-pod-autoscaler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 2,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T01:43:19Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "demo-autoscale",
+        "namespace": "selfheal",
+        "resourceVersion": "50382",
+        "uid": "7a00e82c-bd52-49be-87de-0d2bb8464c4f"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T01:49:37Z",
+      "message": "Scaled down replica set demo-autoscale-565b9b7d85 from 6 to 2",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T01:43:19Z",
+        "name": "demo-autoscale.18e502b41a175625",
+        "namespace": "selfheal",
+        "resourceVersion": "51124",
+        "uid": "91090265-14ba-45a3-b4e9-8d979c6de331"
+      },
+      "reason": "ScalingReplicaSet",
+      "reportingComponent": "deployment-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T01:46:05Z",
+      "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "demo-autoscale",
+        "namespace": "selfheal",
+        "resourceVersion": "50670",
+        "uid": "ff04f249-45e7-460a-8917-c10f96e1c0e0"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T01:46:05Z",
+      "message": "New size: 6; reason: cpu resource utilization (percentage of request) above target",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T01:46:05Z",
+        "name": "demo-autoscale.18e502dad9a063d4",
+        "namespace": "selfheal",
+        "resourceVersion": "50696",
+        "uid": "b937a7e2-8c68-4888-b638-efe93a8d60bd"
+      },
+      "reason": "SuccessfulRescale",
+      "reportingComponent": "horizontal-pod-autoscaler",
+      "reportingInstance": "",
+      "source": {
+        "component": "horizontal-pod-autoscaler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T01:49:37Z",
+      "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "demo-autoscale",
+        "namespace": "selfheal",
+        "resourceVersion": "51053",
+        "uid": "ff04f249-45e7-460a-8917-c10f96e1c0e0"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T01:49:37Z",
+      "message": "New size: 2; reason: All metrics below target",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T01:49:37Z",
+        "name": "demo-autoscale.18e5030c4f205250",
+        "namespace": "selfheal",
+        "resourceVersion": "51121",
+        "uid": "18b94583-03c5-4795-bcbf-a54696f3463d"
+      },
+      "reason": "SuccessfulRescale",
+      "reportingComponent": "horizontal-pod-autoscaler",
+      "reportingInstance": "",
+      "source": {
+        "component": "horizontal-pod-autoscaler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T01:52:10Z",
+      "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "demo-autoscale",
+        "namespace": "selfheal",
+        "resourceVersion": "51380",
+        "uid": "aa9b7250-f415-4260-bbe5-a1272d3ab822"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T01:52:10Z",
+      "message": "New size: 5; reason: cpu resource utilization (percentage of request) above target",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T01:52:10Z",
+        "name": "demo-autoscale.18e5032fd344ebe0",
+        "namespace": "selfheal",
+        "resourceVersion": "51406",
+        "uid": "87a7e232-a190-4dc7-80bb-17d999f04e26"
+      },
+      "reason": "SuccessfulRescale",
+      "reportingComponent": "horizontal-pod-autoscaler",
+      "reportingInstance": "",
+      "source": {
+        "component": "horizontal-pod-autoscaler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T01:52:10Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "demo-autoscale",
+        "namespace": "selfheal",
+        "resourceVersion": "51403",
+        "uid": "7a00e82c-bd52-49be-87de-0d2bb8464c4f"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T01:52:10Z",
+      "message": "Scaled up replica set demo-autoscale-565b9b7d85 from 2 to 5",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T01:52:10Z",
+        "name": "demo-autoscale.18e5032fd5229c01",
+        "namespace": "selfheal",
+        "resourceVersion": "51407",
+        "uid": "6bc22f8d-b57e-4ef3-ba8f-c980fa00677a"
+      },
+      "reason": "ScalingReplicaSet",
+      "reportingComponent": "deployment-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T01:52:25Z",
+      "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "demo-autoscale",
+        "namespace": "selfheal",
+        "resourceVersion": "51404",
+        "uid": "aa9b7250-f415-4260-bbe5-a1272d3ab822"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T01:52:25Z",
+      "message": "New size: 6; reason: cpu resource utilization (percentage of request) above target",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T01:52:25Z",
+        "name": "demo-autoscale.18e5033364db1c8c",
+        "namespace": "selfheal",
+        "resourceVersion": "51519",
+        "uid": "6ba2cd9e-e6e4-46f9-bbf6-3fe15e721686"
+      },
+      "reason": "SuccessfulRescale",
+      "reportingComponent": "horizontal-pod-autoscaler",
+      "reportingInstance": "",
+      "source": {
+        "component": "horizontal-pod-autoscaler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T01:52:25Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "demo-autoscale",
+        "namespace": "selfheal",
+        "resourceVersion": "51518",
+        "uid": "7a00e82c-bd52-49be-87de-0d2bb8464c4f"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T01:52:25Z",
+      "message": "Scaled up replica set demo-autoscale-565b9b7d85 from 5 to 6",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T01:52:25Z",
+        "name": "demo-autoscale.18e50333657d9ede",
+        "namespace": "selfheal",
+        "resourceVersion": "51522",
+        "uid": "73d7c44f-5768-470f-81fc-78209063f8cc"
+      },
+      "reason": "ScalingReplicaSet",
+      "reportingComponent": "deployment-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T01:55:28Z",
+      "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "demo-autoscale",
+        "namespace": "selfheal",
+        "resourceVersion": "51799",
+        "uid": "aa9b7250-f415-4260-bbe5-a1272d3ab822"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T01:55:28Z",
+      "message": "New size: 5; reason: All metrics below target",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T01:55:28Z",
+        "name": "demo-autoscale.18e5035dd9c969fe",
+        "namespace": "selfheal",
+        "resourceVersion": "51821",
+        "uid": "d0efebab-1c77-4f8f-907f-a2c38b5c1fa6"
+      },
+      "reason": "SuccessfulRescale",
+      "reportingComponent": "horizontal-pod-autoscaler",
+      "reportingInstance": "",
+      "source": {
+        "component": "horizontal-pod-autoscaler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T01:55:28Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "demo-autoscale",
+        "namespace": "selfheal",
+        "resourceVersion": "51819",
+        "uid": "7a00e82c-bd52-49be-87de-0d2bb8464c4f"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T01:55:28Z",
+      "message": "Scaled down replica set demo-autoscale-565b9b7d85 from 6 to 5",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T01:55:28Z",
+        "name": "demo-autoscale.18e5035ddaa8a397",
+        "namespace": "selfheal",
+        "resourceVersion": "51823",
+        "uid": "7941ea85-9d13-4019-af78-95231df8d286"
+      },
+      "reason": "ScalingReplicaSet",
+      "reportingComponent": "deployment-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T01:55:43Z",
+      "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "demo-autoscale",
+        "namespace": "selfheal",
+        "resourceVersion": "51820",
+        "uid": "aa9b7250-f415-4260-bbe5-a1272d3ab822"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T01:55:43Z",
+      "message": "New size: 2; reason: All metrics below target",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T01:55:43Z",
+        "name": "demo-autoscale.18e5036159441215",
+        "namespace": "selfheal",
+        "resourceVersion": "51864",
+        "uid": "4325570c-728e-45ca-beb8-74f1c38748a7"
+      },
+      "reason": "SuccessfulRescale",
+      "reportingComponent": "horizontal-pod-autoscaler",
+      "reportingInstance": "",
+      "source": {
+        "component": "horizontal-pod-autoscaler"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T01:55:43Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "demo-autoscale",
+        "namespace": "selfheal",
+        "resourceVersion": "51863",
+        "uid": "7a00e82c-bd52-49be-87de-0d2bb8464c4f"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T01:55:43Z",
+      "message": "Scaled down replica set demo-autoscale-565b9b7d85 from 5 to 2",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T01:55:43Z",
+        "name": "demo-autoscale.18e503615a0f03b6",
+        "namespace": "selfheal",
+        "resourceVersion": "51867",
+        "uid": "266e84b1-72fe-4e50-8d8b-d454717ae42a"
+      },
+      "reason": "ScalingReplicaSet",
+      "reportingComponent": "deployment-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "type": "Normal"
+    }
+  ],
+  "kind": "List",
+  "metadata": {
+    "resourceVersion": ""
+  }
+}

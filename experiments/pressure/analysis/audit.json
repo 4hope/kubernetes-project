@@ -1,0 +1,16 @@
+{
+  "original_raw_files_unchanged": 192,
+  "selected_runs_audited": 12,
+  "selected_requests_accounted_for": 120000,
+  "identical_async_client_source": true,
+  "same_app_limits": true,
+  "serving_pod_names_verified": true,
+  "pre_action_success_versions_v1": true,
+  "sessions_restored": [
+    "20261029_async_confirmation_04",
+    "20261029_async_pilot_03",
+    "20261029_async_rollout_05",
+    "20261029_pilot_01",
+    "20261029_pilot_02"
+  ]
+}

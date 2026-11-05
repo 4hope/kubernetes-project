@@ -1,0 +1,27 @@
+{
+  "scheduled_requests": 5000,
+  "sent_requests": 5000,
+  "generator_errors": 0,
+  "failed_requests": 79,
+  "failure_percent": 1.58,
+  "successful_latency_p50_ms": 1.1003580000306101,
+  "successful_latency_p95_ms": 16.99077400007809,
+  "max_schedule_delay_ms": 1.6403999998821917,
+  "schedule_delay_p95_ms": 1.1587129999459655,
+  "versions": {
+    "v1": 4921
+  },
+  "serving_pods": {
+    "demo-web-84fb8db64-gg6s5": 4921
+  },
+  "mode": "steady",
+  "replicas": 1,
+  "rate": 250.0,
+  "duration": 20.0,
+  "completion_observed_s": null,
+  "validation_issues": [],
+  "min_ready": 1,
+  "max_ready": 1,
+  "min_available": 1,
+  "all_attempt_latency_p95_ms": 21.11850599999343
+}

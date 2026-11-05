@@ -1,0 +1,161 @@
+{
+  "apiVersion": "apps/v1",
+  "kind": "Deployment",
+  "metadata": {
+    "annotations": {
+      "deployment.kubernetes.io/revision": "2",
+      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{},\"labels\":{\"k8s-app\":\"metrics-server\"},\"name\":\"metrics-server\",\"namespace\":\"kube-system\"},\"spec\":{\"selector\":{\"matchLabels\":{\"k8s-app\":\"metrics-server\"}},\"strategy\":{\"rollingUpdate\":{\"maxUnavailable\":0}},\"template\":{\"metadata\":{\"labels\":{\"k8s-app\":\"metrics-server\"}},\"spec\":{\"containers\":[{\"args\":[\"--cert-dir=/tmp\",\"--secure-port=10250\",\"--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname\",\"--kubelet-use-node-status-port\",\"--metric-resolution=15s\"],\"image\":\"registry.k8s.io/metrics-server/metrics-server:v0.9.1\",\"imagePullPolicy\":\"IfNotPresent\",\"livenessProbe\":{\"failureThreshold\":3,\"httpGet\":{\"path\":\"/livez\",\"port\":\"https\",\"scheme\":\"HTTPS\"},\"periodSeconds\":10},\"name\":\"metrics-server\",\"ports\":[{\"containerPort\":10250,\"name\":\"https\",\"protocol\":\"TCP\"}],\"readinessProbe\":{\"failureThreshold\":3,\"httpGet\":{\"path\":\"/readyz\",\"port\":\"https\",\"scheme\":\"HTTPS\"},\"initialDelaySeconds\":20,\"periodSeconds\":10},\"resources\":{\"requests\":{\"cpu\":\"100m\",\"memory\":\"200Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"capabilities\":{\"drop\":[\"ALL\"]},\"readOnlyRootFilesystem\":true,\"runAsNonRoot\":true,\"runAsUser\":1000,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}},\"volumeMounts\":[{\"mountPath\":\"/tmp\",\"name\":\"tmp-dir\"}]}],\"nodeSelector\":{\"kubernetes.io/os\":\"linux\"},\"priorityClassName\":\"system-cluster-critical\",\"serviceAccountName\":\"metrics-server\",\"volumes\":[{\"emptyDir\":{},\"name\":\"tmp-dir\"}]}}}}\n"
+    },
+    "creationTimestamp": "2026-11-05T01:37:01Z",
+    "generation": 2,
+    "labels": {
+      "k8s-app": "metrics-server"
+    },
+    "name": "metrics-server",
+    "namespace": "kube-system",
+    "resourceVersion": "49690",
+    "uid": "4dcf833e-dcca-4cde-a1b6-082b486b9aca"
+  },
+  "spec": {
+    "progressDeadlineSeconds": 600,
+    "replicas": 1,
+    "revisionHistoryLimit": 10,
+    "selector": {
+      "matchLabels": {
+        "k8s-app": "metrics-server"
+      }
+    },
+    "strategy": {
+      "rollingUpdate": {
+        "maxSurge": "25%",
+        "maxUnavailable": 0
+      },
+      "type": "RollingUpdate"
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "k8s-app": "metrics-server"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "args": [
+              "--cert-dir=/tmp",
+              "--secure-port=10250",
+              "--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname",
+              "--kubelet-use-node-status-port",
+              "--metric-resolution=15s",
+              "--kubelet-insecure-tls"
+            ],
+            "image": "registry.k8s.io/metrics-server/metrics-server:v0.9.1",
+            "imagePullPolicy": "IfNotPresent",
+            "livenessProbe": {
+              "failureThreshold": 3,
+              "httpGet": {
+                "path": "/livez",
+                "port": "https",
+                "scheme": "HTTPS"
+              },
+              "periodSeconds": 10,
+              "successThreshold": 1,
+              "timeoutSeconds": 1
+            },
+            "name": "metrics-server",
+            "ports": [
+              {
+                "containerPort": 10250,
+                "name": "https",
+                "protocol": "TCP"
+              }
+            ],
+            "readinessProbe": {
+              "failureThreshold": 3,
+              "httpGet": {
+                "path": "/readyz",
+                "port": "https",
+                "scheme": "HTTPS"
+              },
+              "initialDelaySeconds": 20,
+              "periodSeconds": 10,
+              "successThreshold": 1,
+              "timeoutSeconds": 1
+            },
+            "resources": {
+              "requests": {
+                "cpu": "100m",
+                "memory": "200Mi"
+              }
+            },
+            "securityContext": {
+              "allowPrivilegeEscalation": false,
+              "capabilities": {
+                "drop": [
+                  "ALL"
+                ]
+              },
+              "readOnlyRootFilesystem": true,
+              "runAsNonRoot": true,
+              "runAsUser": 1000,
+              "seccompProfile": {
+                "type": "RuntimeDefault"
+              }
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "volumeMounts": [
+              {
+                "mountPath": "/tmp",
+                "name": "tmp-dir"
+              }
+            ]
+          }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "nodeSelector": {
+          "kubernetes.io/os": "linux"
+        },
+        "priorityClassName": "system-cluster-critical",
+        "restartPolicy": "Always",
+        "schedulerName": "default-scheduler",
+        "securityContext": {},
+        "serviceAccount": "metrics-server",
+        "serviceAccountName": "metrics-server",
+        "terminationGracePeriodSeconds": 30,
+        "volumes": [
+          {
+            "emptyDir": {},
+            "name": "tmp-dir"
+          }
+        ]
+      }
+    }
+  },
+  "status": {
+    "availableReplicas": 1,
+    "conditions": [
+      {
+        "lastTransitionTime": "2026-11-05T01:37:41Z",
+        "lastUpdateTime": "2026-11-05T01:37:41Z",
+        "message": "Deployment has minimum availability.",
+        "reason": "MinimumReplicasAvailable",
+        "status": "True",
+        "type": "Available"
+      },
+      {
+        "lastTransitionTime": "2026-11-05T01:37:01Z",
+        "lastUpdateTime": "2026-11-05T01:37:41Z",
+        "message": "ReplicaSet \"metrics-server-76558b4bb9\" has successfully progressed.",
+        "reason": "NewReplicaSetAvailable",
+        "status": "True",
+        "type": "Progressing"
+      }
+    ],
+    "observedGeneration": 2,
+    "readyReplicas": 1,
+    "replicas": 1,
+    "terminatingReplicas": 0,
+    "updatedReplicas": 1
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "scheduled_requests": 800,
+  "sent_requests": 800,
+  "generator_errors": 0,
+  "failed_requests": 0,
+  "failure_percent": 0.0,
+  "successful_latency_p50_ms": 9.92903499991371,
+  "successful_latency_p95_ms": 31.83209300004819,
+  "max_schedule_delay_ms": 6.4418300003126205,
+  "schedule_delay_p95_ms": 0.4095500003131747,
+  "versions": {
+    "v1": 322,
+    "v2": 478
+  },
+  "serving_pods": {
+    "demo-web-84fb8db64-77rxw": 127,
+    "demo-web-84fb8db64-zt42v": 195,
+    "demo-web-7d56c4cc4f-vdwlw": 278,
+    "demo-web-7d56c4cc4f-m785b": 200
+  },
+  "mode": "rollout-a",
+  "completion_observed_s": 25.49893388199962,
+  "completion_definition": "v2 updated and available",
+  "max_sample_gap_s": 1.00089329299999,
+  "action_window_45s": {
+    "scheduled_requests": 447,
+    "sent_requests": 447,
+    "generator_errors": 0,
+    "failed_requests": 0,
+    "failure_percent": 0.0,
+    "successful_latency_p50_ms": 9.986206999656133,
+    "successful_latency_p95_ms": 32.56711299991366,
+    "max_schedule_delay_ms": 2.324774000229013,
+    "schedule_delay_p95_ms": 0.39233000024907483,
+    "versions": {
+      "v1": 180,
+      "v2": 267
+    },
+    "serving_pods": {
+      "demo-web-84fb8db64-77rxw": 68,
+      "demo-web-84fb8db64-zt42v": 112,
+      "demo-web-7d56c4cc4f-vdwlw": 163,
+      "demo-web-7d56c4cc4f-m785b": 104
+    }
+  },
+  "action_window_fully_scheduled": true,
+  "validation_issues": []
+}

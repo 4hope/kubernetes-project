@@ -1,0 +1,14 @@
+test_startup_readiness_and_response_identity (test_project.ApplicationTests.test_startup_readiness_and_response_identity) ... ok
+test_version_label_changes_without_different_api (test_project.ApplicationTests.test_version_label_changes_without_different_api) ... ok
+test_http_errors_are_request_failures (test_project.GeneratorTests.test_http_errors_are_request_failures) ... ok
+test_invalid_json_is_not_a_successful_request (test_project.GeneratorTests.test_invalid_json_is_not_a_successful_request) ... ok
+test_success_records_include_latency_version_and_pod (test_project.GeneratorTests.test_success_records_include_latency_version_and_pod) ... ok
+test_latency_excludes_failures_and_generator_errors_are_separate (test_project.MeasurementTests.test_latency_excludes_failures_and_generator_errors_are_separate) ... ok
+test_terminating_pod_is_not_counted_ready (test_project.MeasurementTests.test_terminating_pod_is_not_counted_ready) ... ok
+test_autoscaling_raw_records_reproduce_observed_scale_up_and_down (test_project.RecordedEvidenceTests.test_autoscaling_raw_records_reproduce_observed_scale_up_and_down) ... ok
+test_raw_records_reproduce_key_results_and_saved_checksums (test_project.RecordedEvidenceTests.test_raw_records_reproduce_key_results_and_saved_checksums) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 17.586s
+
+OK

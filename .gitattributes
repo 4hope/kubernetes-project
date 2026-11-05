@@ -1,0 +1,14 @@
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.yaml text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.pdf binary
+*.png binary
+# Historical measurements must retain their exact bytes on every checkout.
+results/** -text
+experiments/pressure/results/** -text
+artifacts/live-validation/** -text
+experiments/autoscaling/results/** -text

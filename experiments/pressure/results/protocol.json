@@ -1,0 +1,41 @@
+{
+  "research_question": "Does maintaining two ready copies improve HTTP outcomes during rollout under a load that stresses one copy?",
+  "HPA_enabled": false,
+  "selection": {
+    "exploratory_async_session": "20261029_async_pilot_03",
+    "independent_confirmation_session": "20261029_async_confirmation_04",
+    "selected_requests_per_second": 250,
+    "reason": "Lowest async-pilot rate where one copy had errors and two had none; three independent repeats then confirmed one-copy error rates above 1% and two-copy rates at 0%.",
+    "one_replica_confirmation_failed_requests": [136, 124, 79],
+    "two_replica_confirmation_failed_requests": [0, 0, 0],
+    "requests_per_confirmation_run": 5000
+  },
+  "rollout_plan": {
+    "session": "20261029_async_rollout_05",
+    "rate": 250,
+    "duration_seconds": 60,
+    "replicas": 2,
+    "repeats_each": 3,
+    "order": ["A", "B", "B", "A", "A", "B"],
+    "action_at_seconds": 15,
+    "A": {"maxUnavailable": 0, "maxSurge": 1},
+    "B": {"maxUnavailable": 1, "maxSurge": 0},
+    "client": "async-http1-v1",
+    "client_concurrency_limit": 512,
+    "request_total_timeout_seconds": 1,
+    "client_cpu_limit_cores": 2,
+    "client_memory_limit_MiB": 512,
+    "app_cpu_limit_millicores_each": 250,
+    "app_memory_limit_MiB_each": 128
+  },
+  "validity_checks": [
+    "all scheduled sequence IDs accounted for exactly once",
+    "no client saturation",
+    "p95 client scheduling delay no larger than one arrival interval",
+    "rollout completion observed",
+    "final 100 successful responses contain v2 only"
+  ],
+  "interpretation": "Service errors are an outcome; do not change load or application implementation to force a preferred A/B conclusion. Preserve exploratory and invalid runs separately. Report repeats and variation.",
+  "initial_threaded_series": "pilot_01 is low-load exploration; pilot_02 was interrupted after scheduling/saturation problems. Do not pool these with async confirmation.",
+  "execution": "Codex runs this additional series at the student's request; student ran the original 12 runs."
+}

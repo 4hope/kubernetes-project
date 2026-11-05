@@ -1,0 +1,42 @@
+{
+  "scheduled_requests": 800,
+  "sent_requests": 800,
+  "generator_errors": 0,
+  "failed_requests": 0,
+  "failure_percent": 0.0,
+  "successful_latency_p50_ms": 10.618331999921793,
+  "successful_latency_p95_ms": 29.228013000192732,
+  "max_schedule_delay_ms": 9.50741700016522,
+  "schedule_delay_p95_ms": 0.45731200043519493,
+  "versions": {
+    "v1": 800
+  },
+  "serving_pods": {
+    "demo-web-84fb8db64-dtqpc": 391,
+    "demo-web-84fb8db64-52t9d": 409
+  },
+  "mode": "baseline",
+  "completion_observed_s": null,
+  "completion_definition": "none (baseline)",
+  "max_sample_gap_s": 1.0002351130001443,
+  "action_window_45s": {
+    "scheduled_requests": 413,
+    "sent_requests": 413,
+    "generator_errors": 0,
+    "failed_requests": 0,
+    "failure_percent": 0.0,
+    "successful_latency_p50_ms": 10.00805900002888,
+    "successful_latency_p95_ms": 30.854911000005814,
+    "max_schedule_delay_ms": 5.595893000005958,
+    "schedule_delay_p95_ms": 0.46216600012627396,
+    "versions": {
+      "v1": 413
+    },
+    "serving_pods": {
+      "demo-web-84fb8db64-52t9d": 214,
+      "demo-web-84fb8db64-dtqpc": 199
+    }
+  },
+  "action_window_fully_scheduled": true,
+  "validation_issues": []
+}

@@ -1,0 +1,14 @@
+{
+  "demo-web-84fb8db64-bdf6q": {
+    "monotonic_s": 618.848297384,
+    "cpu.stat": "usage_usec 8749315\nuser_usec 4413335\nsystem_usec 4335979\nnr_periods 515\nnr_throttled 209\nthrottled_usec 4728280\nnr_bursts 0\nburst_usec 0\n",
+    "cpu.max": "25000 100000\n",
+    "memory.current": "24485888\n"
+  },
+  "demo-web-84fb8db64-cjgzq": {
+    "monotonic_s": 619.483950773,
+    "cpu.stat": "usage_usec 3627421\nuser_usec 2154294\nsystem_usec 1473126\nnr_periods 254\nnr_throttled 12\nthrottled_usec 489390\nnr_bursts 0\nburst_usec 0\n",
+    "cpu.max": "25000 100000\n",
+    "memory.current": "24330240\n"
+  }
+}

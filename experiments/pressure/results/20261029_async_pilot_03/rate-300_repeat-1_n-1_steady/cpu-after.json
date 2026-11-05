@@ -1,0 +1,8 @@
+{
+  "demo-web-84fb8db64-kqqwn": {
+    "monotonic_s": 937.829509706,
+    "cpu.stat": "usage_usec 17109413\nuser_usec 8688046\nsystem_usec 8421367\nnr_periods 961\nnr_throttled 438\nthrottled_usec 22104305\nnr_bursts 0\nburst_usec 0\n",
+    "cpu.max": "25000 100000\n",
+    "memory.current": "24494080\n"
+  }
+}

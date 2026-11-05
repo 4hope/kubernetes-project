@@ -1,0 +1,8 @@
+{
+  "name": "high",
+  "rate": 400,
+  "duration_s": 150,
+  "start_s": 62.155480977000025,
+  "alignment": "runner receipt of client-start message",
+  "end_s": 213.11182546999999
+}

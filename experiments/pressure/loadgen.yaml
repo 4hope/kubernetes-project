@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: loadgen-pressure
+  namespace: selfheal
+  labels:
+    app: loadgen-pressure
+spec:
+  automountServiceAccountToken: false
+  restartPolicy: Never
+  containers:
+    - name: client
+      image: selfheal-web:v1
+      imagePullPolicy: Never
+      command: ["python", "-c", "import time; time.sleep(86400)"]
+      resources:
+        requests:
+          cpu: "500m"
+          memory: "128Mi"
+        limits:
+          cpu: "2"
+          memory: "512Mi"
+      volumeMounts:
+        - name: scripts
+          mountPath: /scripts
+          readOnly: true
+  volumes:
+    - name: scripts
+      configMap:
+        name: pressure-scripts

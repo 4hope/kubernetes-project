@@ -1,0 +1,8 @@
+{
+  "name": "low",
+  "rate": 10,
+  "duration_s": 60,
+  "start_s": 0.7092260399999759,
+  "alignment": "runner receipt of client-start message",
+  "end_s": 61.51505045800013
+}
