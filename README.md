@@ -36,7 +36,7 @@ The in-cluster client sends `GET /` to `http://demo-web:8080/`. Example response
 
 ## Recorded demo
 
-**Video:** Add the recording link here or link to `demo/recording.mp4` after adding the file.
+**Video:** [Watch the recorded demo on Google Drive](https://drive.google.com/file/d/16lg4L3LeKWUHQ0LY6FMP0OswTXqZaLnH/view?usp=sharing)
 
 After setup, watch the Pods in a second Ubuntu terminal:
 
@@ -54,6 +54,8 @@ python3 -B /mnt/d/kubernetes-project/scripts/experiment.py rollout-b --duration 
 ```
 
 Show the new Pod name, Ready counts, `completion_observed_s` and `failed_requests`. Each run prepares v1 before the measured action. Press Ctrl+C to stop the watch.
+
+Finish with the [saved autoscaling graph](artifacts/autoscaling.svg).
 
 ## Tests
 
@@ -109,7 +111,9 @@ bash experiments/autoscaling/setup.sh
 python3 -B experiments/autoscaling/run.py
 ```
 
-The default is 3 cycles at 10, 400 and 10 requests/s for 60, 150 and 150 s respectively. [Replica counts](artifacts/autoscaling.svg) · [Autoscaling results](artifacts/autoscaling-results.json)
+The default is 3 cycles at 10, 400 and 10 requests/s for 60, 150 and 150 s respectively. [Autoscaling results](artifacts/autoscaling-results.json)
+
+![Desired and Ready Pod counts across the three autoscaling runs](artifacts/autoscaling.svg)
 
 ## Reproduce tables and figures
 
@@ -129,4 +133,4 @@ The original series recorded 0 failures in 9,600 requests. Under pressure, A rec
 
 Project code covers the HTTP app, manifests, workload generators and analysis. Metrics Server is an upstream dependency. [Apache-2.0 license](https://github.com/kubernetes-sigs/metrics-server/blob/v0.9.1/LICENSE)
 
-I used OpenAI Codex to help develop and document the project. I ran the original experiments, and Codex ran the pressure and autoscaling extensions. Raw logs, automated tests and live cluster checks were used to verify the results.
+I used ChatGPT to help develop and document the project. The code was checked with automated tests, and the experimental results were verified against logs from live Kubernetes runs. Request and failure counts were recalculated from the HTTP logs, and saved Pod states were used to verify recovery, rollout completion, and autoscaling.
